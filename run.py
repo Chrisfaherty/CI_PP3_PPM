@@ -31,9 +31,13 @@ def create_master_account():
     master_account_username = input("Create your manager accounts user name: ")
     print(f"Storing username {master_account_username} ...\n")
 
-    master_account_password = input("create your master accounts password: ")
-    validate_password(master_account_password)
-    print(f"Storing password {master_account_password} ...\n")
+    while True:
+        master_account_password = input("create your master accounts password: ")
+        if validate_password(master_account_password):
+            print(f"Storing password {master_account_password} ...\n")
+            break
+    
+    return master_account_password
 
 
 
@@ -43,7 +47,7 @@ def validate_password(password_to_validate):
     Inside the try, checks to make sure the password contains a capital letter,
     lowercase letter & a special character.
     Raises ValueError if the password does not contain a lowercase & uppercase,
-    or if there aren't more than 6 values.
+    or if there aren't more than 6 values. credits geeksforgeeks.org
     """
     l, u, p, d = 0, 0, 0, 0
     s = password_to_validate
@@ -74,6 +78,8 @@ def validate_password(password_to_validate):
     else:
         print("Invalid Password")
         print("Must be 8 + characters, lowercase, uppercase & special character @$_")
+        return False
+    
+    return True
 
-
-create_master_account()
+master_data = create_master_account()
