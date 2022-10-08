@@ -21,24 +21,18 @@ SHEET = GSPREAD_CLIENT.open('ci_pp3_ppm')
 
 # welcome message
 
+# welcome message
+name = input("Input your name: ")
+print("Hi " + name + ", Welcome to your personal password manager!")
+
 
 def create_master_account():
-    """
-    create the master password and user name for your
-    personal password manager account
-    """
-    while True:
-        name = input("Input your name: ")
-        print("Hi " + name + ", Welcome to your personal password manager!")
+    """create the master password and user name for your personal password manager account"""
+    master_account_username = input("Create your manager accounts user name: ")
+    print(f"Storing username {master_account_username}...\n")
 
-        master_username = input("Create your account username: ")
-        print("saving username...\n")
+    master_account_password = input("create your master accounts password: ")
+    print(f"Storing password {master_account_password}...\n")
 
-        master_password = input("create your account password: ")
-        print("saving password...\n")
 
-        master_account_details = [name, master_username, master_password]
-
-        print(master_account_details)
-
-    return master_password
+create_master_account()
