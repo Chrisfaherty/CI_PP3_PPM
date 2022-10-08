@@ -21,13 +21,14 @@ SHEET = GSPREAD_CLIENT.open('ci_pp3_ppm')
 
 # welcome message
 
-# welcome message
-name = input("Input your name: ")
-print("Hi " + name + ", Welcome to your personal password manager!")
+
 
 
 def create_master_account():
-    """create the master password and user name for your personal password manager account"""
+    """create the master pwd and username for your personal pwd manager acc"""
+    # welcome message
+    name = input("Input your name: ")
+    print("Hi " + name + ", Welcome to your personal password manager!")
     master_account_username = input("Create your manager accounts user name: ")
     print(f"Storing username {master_account_username} ...\n")
 
@@ -36,8 +37,8 @@ def create_master_account():
         if validate_password(master_account_password):
             print(f"Storing password {master_account_password} ...\n")
             break
-    
-    return master_account_password
+        
+    return name, master_account_username, master_account_password
 
 
 
@@ -82,4 +83,15 @@ def validate_password(password_to_validate):
     
     return True
 
+
+def update_settings_worksheet(master_data):
+    """Update sales worksheet with the master data"""
+    print("Updating settings worksheet ...\n")
+    settings_worksheet = SHEET.worksheet('settings')
+    settings_worksheet.append_row(master_data)
+    print("Settings updated sucessfully.\n")
+
+
 master_data = create_master_account()
+print(master_data)
+update_settings_worksheet(master_data)
