@@ -55,33 +55,33 @@ if answer == "create account":
         """
         l, u, p, d = 0, 0, 0, 0
         s = password_to_validate
-        capitalalphabets="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        smallalphabets="abcdefghijklmnopqrstuvwxyz"
-        specialchar="$@_"
-        digits="0123456789"
+        capitalalphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        smallalphabets = "abcdefghijklmnopqrstuvwxyz"
+        specialchar = "$@_"
+        digits = "0123456789"
         if (len(s) >= 8):
             for i in s:
         
                 # counting lowercase alphabets
                 if (i in smallalphabets):
-                    l+=1           
+                    l += 1           
         
                 # counting uppercase alphabets
                 if (i in capitalalphabets):
-                    u+=1           
+                    u += 1           
         
                 # counting digits
                 if (i in digits):
-                    d+=1           
+                    d += 1           
         
                 # counting the mentioned special characters
                 if(i in specialchar):
-                    p+=1       
-        if (l>=1 and u>=1 and p>=1 and d>=1 and l+p+u+d==len(s)):
+                    p += 1       
+        if (l >= 1 and u >= 1 and p >= 1 and d >= 1 and l + p + u + d == len(s)):
             print("Valid Password")
         else:
             print("Invalid Password")
-            print("Must be 8 + characters, lowercase, uppercase & special character @$_")
+            print("Must be 8 + characters, lower, upper, number & special @$_")
             return False
         
         return True
@@ -93,13 +93,15 @@ if answer == "create account":
         settings_worksheet = SHEET.worksheet('settings')
         settings_worksheet.append_row(master_data)
         print("Settings updated sucessfully.\n")
-
-
+    
     master_data = create_master_account()
     print(master_data)
     update_settings_worksheet(master_data)
 
-    """The functions below here will be for the steps that will occure once logged in. """
+    """
+    The functions below here will be for the steps 
+    that will occure once logged in.
+    """
 elif answer == "login":
     print("login.....")
     print("Type 1 to View, 2 to add, 3 to edit & 4 to edit master pwd")
@@ -107,10 +109,20 @@ elif answer == "login":
     option = input('Type 1, 2, 3 or 4: ')
 
     if option == "1":
-        print("View Passwords")
+        print("You selected to view your passwords")
+
+        def view_passwords():
+            print("Retriving passwords!... ")
+
+            all_passwords = SHEET.worksheet("password_manager").get_all_values()
+            print(all_passwords)
+        
+        view_passwords()
+
+
 
     elif option == "2":
-        print("You selected add password")
+        print("You selected to add a new password")
 
         def store_password():
             """store a new password"""
@@ -131,36 +143,39 @@ elif answer == "login":
 
         def validate_password(password_to_validate):
             """
-            Inside the try, checks to make sure the password contains a capital letter,
+            Inside the try, checks to make sure the password
+            contains a capital letter,
             lowercase letter & a special character.
-            Raises ValueError if the password does not contain a lowercase & uppercase,
-            or if there aren't more than 6 values. credits geeksforgeeks.org
+            Raises ValueError if the password does not contain 
+            a lowercase & uppercase,
+            or if there aren't more than 6 values. 
+            credits geeksforgeeks.org
             """
             l, u, p, d = 0, 0, 0, 0
             s = password_to_validate
-            capitalalphabets="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-            smallalphabets="abcdefghijklmnopqrstuvwxyz"
-            specialchar="$@_"
-            digits="0123456789"
+            capitalalphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            smallalphabets = "abcdefghijklmnopqrstuvwxyz"
+            specialchar = "$@_"
+            digits = "0123456789"
             if (len(s) >= 8):
                 for i in s:
             
                     # counting lowercase alphabets
                     if (i in smallalphabets):
-                        l+=1           
+                        l += 1           
             
                     # counting uppercase alphabets
                     if (i in capitalalphabets):
-                        u+=1           
+                        u += 1           
             
                     # counting digits
                     if (i in digits):
-                        d+=1           
+                        d += 1           
             
                     # counting the mentioned special characters
                     if(i in specialchar):
-                        p+=1       
-            if (l>=1 and u>=1 and p>=1 and d>=1 and l+p+u+d==len(s)):
+                        p += 1       
+            if (l >= 1 and u >= 1 and p >= 1 and d >= 1 and l + p + u + d == len(s)):
                 print("Valid Password")
             else:
                 print("Invalid Password")
@@ -176,7 +191,6 @@ elif answer == "login":
             password_manager_worksheet = SHEET.worksheet('password_manager')
             password_manager_worksheet.append_row(new_data)
             print("password manager updated sucessfully.\n")
-
 
         new_data = store_password()
         print(new_data)
