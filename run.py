@@ -19,13 +19,21 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('ci_pp3_ppm')
 
-if answer == "Create account":
+# welcome message
+name = input("Input your name: ")
+print("Hi " + name + ", Welcome to your personal password manager!")
+
+"""
+This if statemant will be used for the log in screen to see if
+they want to create an account or login to an existing account
+"""
+answer = input("Create account or Login ").lower()
+
+if answer == "create account":
 
     def create_master_account():
         """create the master pwd and username for your personal pwd manager acc"""
-        # welcome message
-        name = input("Input your name: ")
-        print("Hi " + name + ", Welcome to your personal password manager!")
+
         master_account_username = input("Create your manager accounts user name: ")
         print(f"Storing username {master_account_username} ...\n")
 
@@ -91,6 +99,29 @@ if answer == "Create account":
     print(master_data)
     update_settings_worksheet(master_data)
 
+    """The functions below here will be for the steps that will occure once logged in. """
+elif answer == "login":
+    print("login.....")
+    print("Type 1 to View, 2 to add, 3 to edit & 4 to edit master pwd")
+
+    option = input('Type 1, 2, 3 or 4: ')
+
+    if option == "1":
+        print("View Passwords")
+
+    elif option == "2":
+        print("Add Password")
+
+    elif option == "3":
+        print("Edit Password")
+
+    elif option == "4":
+        print("Edit Master Password")
+
+    else:
+        print("You did not enter a valid response!. ")
+
 
 else:
-    
+    print("You did not enter a valid response!. ")
+
