@@ -108,7 +108,20 @@ if answer == "create account":
 # that will occure once logged in.
     
 elif answer == "login":
-    print("login.....")
+    login_username = input('Input your username: ')
+    login_password = input('Input your password: ')
+
+    settings_worksheet = SHEET.worksheet('settings')
+    actual_username = settings_worksheet.acell('C1').value
+    actual_password = settings_worksheet.acell('C2').value
+
+    if login_username == actual_username and login_password == actual_password:
+        print("login.....")
+    
+    else:
+        print("Username and password didn't match our records")
+
+
     print("Type 1 to View, 2 to add, 3 to edit & 4 to edit master pwd")
 
     option = input('Type 1, 2, 3 or 4: ')
