@@ -5,7 +5,6 @@ sheet.
 import gspread
 from google.oauth2.service_account import Credentials
 import colorama
-from colorama import Fore, Style
 colorama.init(autoreset=True)
 
 SCOPE = [
@@ -23,16 +22,19 @@ SHEET = GSPREAD_CLIENT.open('ci_pp3_ppm')
 name = input("Input your name: ")
 print("Hi " + name + ", Welcome to your personal password manager!")
 
-"""
-This if statemant will be used for the log in screen to see if
-they want to create an account or login to an existing account
-"""
+
+# This if statemant will be used for the log in screen to see if
+# they want to create an account or login to an existing account.
+
 answer = input("Create account or Login ").lower()
 
 if answer == "create account":
 
     def create_master_account():
-        """create the master pwd and username for your personal pwd manager acc"""
+        """
+        Create the master pwd and username for your 
+        personal pwd manager account
+        """
 
         master_account_username = input("Create your manager accounts user name: ")
         print(f"Storing username {master_account_username} ...\n")
@@ -48,10 +50,11 @@ if answer == "create account":
 
     def validate_password(password_to_validate):
         """
-        Inside the try, checks to make sure the password contains a capital letter,
-        lowercase letter & a special character.
-        Raises ValueError if the password does not contain a lowercase & uppercase,
-        or if there aren't more than 6 values. credits geeksforgeeks.org
+        Inside the try, checks to make sure the password contains a
+        capital letter, lowercase letter & a special character.
+        Raises ValueError if the password does not contain 
+        a lowercase & uppercase,mor if there aren't more than 6 values.
+        credits geeksforgeeks.org
         """
         l, u, p, d = 0, 0, 0, 0
         s = password_to_validate
@@ -98,10 +101,10 @@ if answer == "create account":
     print(master_data)
     update_settings_worksheet(master_data)
 
-    """
-    The functions below here will be for the steps 
-    that will occure once logged in.
-    """
+    
+# The functions below here will be for the steps 
+# that will occure once logged in.
+    
 elif answer == "login":
     print("login.....")
     print("Type 1 to View, 2 to add, 3 to edit & 4 to edit master pwd")
@@ -179,7 +182,7 @@ elif answer == "login":
                 print("Valid Password")
             else:
                 print("Invalid Password")
-                print("Must be 8 + characters, lowercase, uppercase & special character @$_")
+                print("Must be 8 + char, lower, upper & special char @$_")
                 return False
             
             return True
