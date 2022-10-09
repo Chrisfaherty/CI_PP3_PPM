@@ -131,7 +131,7 @@ elif answer == "login":
 
         def store_password():
             """store a new password"""
-            new_website = input("Input the website: ")
+            new_website = input("Input the website: ").lower()
             print(f"Storing website {new_website} ...\n")
 
             new_username = input("Input your username: ")
@@ -203,7 +203,10 @@ elif answer == "login":
 
 
     elif option == "3":
-        print("Edit Password")
+        print("You selected to edit a password")
+
+        find_account = input("Account you would like to edit the password: ")
+        print(find_account)
 
     elif option == "4":
         print("Edit Master Password")
