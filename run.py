@@ -6,6 +6,8 @@ import gspread
 from google.oauth2.service_account import Credentials
 import colorama
 colorama.init(autoreset=True)
+import pprint
+
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -118,7 +120,7 @@ elif answer == "login":
             print("Retriving passwords!... ")
 
             all_passwords = SHEET.worksheet("password_manager").get_all_values()
-            print(all_passwords)
+            pprint.pprint(all_passwords)
         
         view_passwords()
 
