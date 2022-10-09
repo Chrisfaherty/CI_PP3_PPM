@@ -206,7 +206,12 @@ elif answer == "login":
         print("You selected to edit a password")
 
         find_account = input("Account you would like to edit the password: ")
-        print(find_account)
+        password_manager_worksheet = SHEET.worksheet('password_manager')
+        cell_of_account = str(password_manager_worksheet.find(find_account))
+        column_of_account = int(cell_of_account[9]) + 2
+        row_of_account = cell_of_account[7]
+        new_password = input("input your new password: ")
+        update_cell_of_account = password_manager_worksheet.update_cell(row_of_account, column_of_account, new_password)
 
     elif option == "4":
         print("Edit Master Password")
