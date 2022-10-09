@@ -112,14 +112,17 @@ elif answer == "login":
     login_password = input('Input your password: ')
 
     settings_worksheet = SHEET.worksheet('settings')
-    actual_username = settings_worksheet.acell('C1').value
+    actual_username = settings_worksheet.acell('B2').value
     actual_password = settings_worksheet.acell('C2').value
+    print(actual_password)
+    print(actual_username)
 
     if login_username == actual_username and login_password == actual_password:
         print("login.....")
     
     else:
         print("Username and password didn't match our records")
+        break
 
 
     print("Type 1 to View, 2 to add, 3 to edit & 4 to edit master pwd")
