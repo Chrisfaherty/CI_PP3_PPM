@@ -110,7 +110,78 @@ elif answer == "login":
         print("View Passwords")
 
     elif option == "2":
-        print("Add Password")
+        print("You selected add password")
+
+        def store_password():
+            """store a new password"""
+            new_website = input("Input the website: ")
+            print(f"Storing website {new_website} ...\n")
+
+            new_username = input("Input your username: ")
+            print(f"Storing username {new_username} ...\n")
+
+            while True:
+                new_password = input("Input your password: ")
+                if validate_password(new_password):
+                    print(f"Storing password {new_password} ...\n")
+                    break
+
+            return new_website, new_username, new_password
+        
+
+        def validate_password(password_to_validate):
+            """
+            Inside the try, checks to make sure the password contains a capital letter,
+            lowercase letter & a special character.
+            Raises ValueError if the password does not contain a lowercase & uppercase,
+            or if there aren't more than 6 values. credits geeksforgeeks.org
+            """
+            l, u, p, d = 0, 0, 0, 0
+            s = password_to_validate
+            capitalalphabets="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            smallalphabets="abcdefghijklmnopqrstuvwxyz"
+            specialchar="$@_"
+            digits="0123456789"
+            if (len(s) >= 8):
+                for i in s:
+            
+                    # counting lowercase alphabets
+                    if (i in smallalphabets):
+                        l+=1           
+            
+                    # counting uppercase alphabets
+                    if (i in capitalalphabets):
+                        u+=1           
+            
+                    # counting digits
+                    if (i in digits):
+                        d+=1           
+            
+                    # counting the mentioned special characters
+                    if(i in specialchar):
+                        p+=1       
+            if (l>=1 and u>=1 and p>=1 and d>=1 and l+p+u+d==len(s)):
+                print("Valid Password")
+            else:
+                print("Invalid Password")
+                print("Must be 8 + characters, lowercase, uppercase & special character @$_")
+                return False
+            
+            return True
+
+
+        def update_password_manager_worksheet(new_data):
+            """Update password_manager worksheet with the master data"""
+            print("Updating password_manager worksheet ...\n")
+            password_manager_worksheet = SHEET.worksheet('password_manager')
+            password_manager_worksheet.append_row(new_data)
+            print("password manager updated sucessfully.\n")
+
+
+        new_data = store_password()
+        print(new_data)
+        update_password_manager_worksheet(new_data)
+
 
     elif option == "3":
         print("Edit Password")
