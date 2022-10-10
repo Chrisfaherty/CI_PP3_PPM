@@ -31,7 +31,7 @@ answer = input("Create account or Login ").lower()
 
 if answer == "create account":
     from validate_password import validate_password
-
+    
     def create_master_account():
         """
         Create the master pwd and username for your
@@ -155,7 +155,6 @@ elif answer == "login":
 
     else:
         print("You did not enter a valid response!. ")
-
 
 else:
     print("You did not enter a valid response!. ")
