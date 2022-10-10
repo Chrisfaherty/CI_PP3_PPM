@@ -9,6 +9,7 @@ colorama.init(autoreset=True)
 import pprint
 
 
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
@@ -31,7 +32,7 @@ print("Hi " + name + ", Welcome to your personal password manager!")
 answer = input("Create account or Login ").lower()
 
 if answer == "create account":
-
+    from validate_password import validate_password
     def create_master_account():
         """
         Create the master pwd and username for your 
@@ -44,52 +45,13 @@ if answer == "create account":
         while True:
             master_account_password = input("create your master accounts password: ")
             if validate_password(master_account_password):
+                password_to_validate = master_account_password
+                validate_password(password_to_validate)
                 print(f"Storing password {master_account_password} ...\n")
                 break
 
         return name, master_account_username, master_account_password
 
-
-    def validate_password(password_to_validate):
-        """
-        Inside the try, checks to make sure the password contains a
-        capital letter, lowercase letter & a special character.
-        Raises ValueError if the password does not contain 
-        a lowercase & uppercase,mor if there aren't more than 6 values.
-        credits geeksforgeeks.org
-        """
-        l, u, p, d = 0, 0, 0, 0
-        s = password_to_validate
-        capitalalphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        smallalphabets = "abcdefghijklmnopqrstuvwxyz"
-        specialchar = "$@_"
-        digits = "0123456789"
-        if (len(s) >= 8):
-            for i in s:
-        
-                # counting lowercase alphabets
-                if (i in smallalphabets):
-                    l += 1           
-        
-                # counting uppercase alphabets
-                if (i in capitalalphabets):
-                    u += 1           
-        
-                # counting digits
-                if (i in digits):
-                    d += 1           
-        
-                # counting the mentioned special characters
-                if(i in specialchar):
-                    p += 1       
-        if (l >= 1 and u >= 1 and p >= 1 and d >= 1 and l + p + u + d == len(s)):
-            print("Valid Password")
-        else:
-            print("Invalid Password")
-            print("Must be 8 + characters, lower, upper, number & special @$_")
-            return False
-        
-        return True
 
 
     def update_settings_worksheet(master_data):
@@ -122,7 +84,6 @@ elif answer == "login":
     
     else:
         print("Username and password didn't match our records")
-        break
 
 
     print("Type 1 to View, 2 to add, 3 to edit & 4 to edit master pwd")
