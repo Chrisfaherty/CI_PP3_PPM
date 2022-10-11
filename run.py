@@ -23,9 +23,9 @@ SHEET = GSPREAD_CLIENT.open('ci_pp3_ppm')
 name = input("Input your name: ")
 print("Hi " + name + ", Welcome to your personal password manager!")
 
-
 # This if statemant will be used for the log in screen to see if
 # they want to create an account or login to an existing account.
+
 
 def main():
     """
@@ -46,14 +46,17 @@ def main():
             check_for_account = settings_worksheet.acell('B2').value
             while True:
                 if check_for_account is None:
-                    master_account_username = input("Create your manager username: ")
+                    master_account_username = input("Create your\
+                        manager username: ")
                     print(f"Storing username {master_account_username} ...\n")
                     while True:
-                        master_account_password = input("create your master password: ")
+                        master_account_password = input("create your\
+                             master password: ")
                         if validate_password(master_account_password):
                             password_to_validate = master_account_password
                             validate_password(password_to_validate)
-                            print(f"Storing password {master_account_password} ...\n")
+                            print(f"Storing password \
+                                {master_account_password} ...\n")
                             break
                 else:
                     should_restart = True
@@ -82,14 +85,16 @@ def main():
         actual_password = settings_worksheet.acell('C2').value
         print(actual_password)
         print(actual_username)
-        if login_username == actual_username and login_password == actual_password:
+        if login_username == actual_username\
+                and login_password == actual_password:
             print("login.....")
         else:
             print("Username and password didn't match our records")
 
         def options():
             """function used to return to the option input"""
-            print("Type 1 to View, 2 to add, 3 to edit, 4 to edit master pwd & 5 to exit")
+            print("Type 1 to View, 2 to add, 3 to edit,\
+            4 to edit master pwd & 5 to exit")
             option = input('Type 1, 2, 3, 4 or 5: ')
             if option == "1":
                 print("You selected to view your passwords")
@@ -100,8 +105,8 @@ def main():
                     the database and display them in the terminal.
                     """
                     print("Retriving passwords!... ")
-                    all_passwords = SHEET.worksheet("password_manager").get_all_values(
-                    )
+                    all_passwords = SHEET.worksheet(
+                        "password_manager").get_all_values()
                     pprint.pprint(all_passwords)
                 view_passwords()
                 options()
@@ -130,9 +135,13 @@ def main():
                     return new_website, new_username, new_password
 
                 def update_password_manager_worksheet(new_data):
-                    """Update password_manager worksheet with the master data"""
+                    """
+                    Update password_manager worksheet
+                    with the master data
+                    """
                     print("Updating password_manager worksheet ...\n")
-                    password_manager_worksheet = SHEET.worksheet('password_manager')
+                    password_manager_worksheet = SHEET.worksheet(
+                        'password_manager')
                     password_manager_worksheet.append_row(new_data)
                     print("password manager updated sucessfully.\n")
 
@@ -140,22 +149,26 @@ def main():
                 print(new_data)
                 update_password_manager_worksheet(new_data)
                 options()
-                        
+
             elif option == "3":
                 print("You selected to edit a password")
-                find_account = input("Account you would like to edit the password: ")
+                find_account = input("Account you would like to edit\
+                 the password: ")
                 password_manager_worksheet = SHEET.worksheet('password_manager')
-                cell_of_account = str(password_manager_worksheet.find(find_account))
+                cell_of_account = str(
+                    password_manager_worksheet.find(find_account))
                 column_of_account = int(cell_of_account[9]) + 2
                 row_of_account = cell_of_account[7]
                 new_password = input("input your new password: ")
-                update_cell_of_account = password_manager_worksheet.update_cell(
-                    row_of_account, column_of_account, new_password)
+                update_cell_of_account = \
+                    password_manager_worksheet.update_cell(
+                        row_of_account, column_of_account, new_password)
                 options()
-                        
+
             elif option == "4":
                 print("You selected to edit master password")
-                find_account = input("Account you would like to edit the password: ")
+                find_account = input("Account you would like\
+                 to edit the password: ")
                 settings_worksheet = SHEET.worksheet('settings')
                 cell_of_account = str(settings_worksheet.find(find_account))
                 column_of_account = int(cell_of_account[9]) + 2
@@ -167,7 +180,7 @@ def main():
 
             elif option == "5":
                 print("you have selected to log it. Thank you, Good Bye!")
-                main()      
+                main()
             else:
                 print("You did not enter a valid response!. ")
                 options()
