@@ -163,14 +163,23 @@ differenciate it from the others')
 
             elif option == "3":
                 print("You selected to edit a password")
-                find_account = input("Account you would like to edit\
+                find_account = input("Account you would like to edit \
 the password: ").lower()
                 password_manager_worksheet = SHEET.worksheet(
                     'password_manager')
                 cell_of_account = str(
                     password_manager_worksheet.find(find_account))
-                column_of_account = int(cell_of_account[9]) + 2
-                row_of_account = cell_of_account[7]
+                number_of_accounts = password_manager_worksheet.col_values(1)
+                length_of_col = len(number_of_accounts)
+                if length_of_col >= 10:
+                    column_of_account = int(cell_of_account[10]) + 2
+                    row_of_account = cell_of_account[7:9]
+                elif length_of_col <= 9:
+                    column_of_account = (cell_of_account[9]) + 2
+                    row_of_account = cell_of_account[7]
+                    print(cell_of_account)
+                    print(column_of_account)
+                    print(row_of_account)
                 new_password = input("input your new password: ")
                 # update cell of account
                 password_manager_worksheet.update_cell(
@@ -200,6 +209,7 @@ to edit the password: ").lower()
         options()
     else:
         print("You did not enter a valid response!. ")
+        main()
 
 
 main()

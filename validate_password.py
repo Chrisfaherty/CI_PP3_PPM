@@ -1,4 +1,4 @@
-def validate_password(password_to_validate):
+def validate_password(password_to_validate: str) -> bool:
     """
     Inside the try, checks to make sure the password contains a
     capital letter, lowercase letter & a special character.
