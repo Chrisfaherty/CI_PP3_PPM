@@ -151,6 +151,7 @@ def main():
                 new_password = input("input your new password: ")
                 update_cell_of_account = password_manager_worksheet.update_cell(
                     row_of_account, column_of_account, new_password)
+                options()
                         
             elif option == "4":
                 print("You selected to edit master password")
@@ -162,9 +163,14 @@ def main():
                 new_password = input("input your new password: ")
                 update_cell_of_account = settings_worksheet.update_cell(
                     row_of_account, column_of_account, new_password)
-                        
+                options()
+
+            elif option == "5":
+                print("you have selected to log it. Thank you, Good Bye!")
+                main()      
             else:
                 print("You did not enter a valid response!. ")
+                options()
         options()
     else:
         print("You did not enter a valid response!. ")
