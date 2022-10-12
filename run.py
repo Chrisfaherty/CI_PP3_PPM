@@ -4,9 +4,9 @@ sheet.
 """
 import pprint
 import gspread
-import colorama
+import time
+from colorama import Fore
 from google.oauth2.service_account import Credentials
-colorama.init(autoreset=True)
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -19,6 +19,32 @@ SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('ci_pp3_ppm')
 
+
+def logo():
+    """
+    Display game name
+    """
+    print(" ")
+    print(Fore.BLUE + "Welcome to:")
+    print(" ")
+    print(Fore.GREEN + " ____________________________________________________________________________________________________ ")
+    print(Fore.GREEN + "|    ____       ___          ___        ___    __                  __     ___     _____      ____    |")
+    print(Fore.GREEN + "|   / __ \     /   \        /    \     /    \  \ \                / /   / __ \   |  __  \   |  _ \   |")
+    print(Fore.GREEN + "|  | /  \ |   /  _  \      /  /\__\   /  /\__\  \ \      __      / /   / /  \ \  | |  | |   | | \ \  |")
+    print(Fore.GREEN + "|  | \__/ |  /  /_\  \     \  \       \  \       \ \    /  \    / /   | |    | | | |__| |   | |  | | |")
+    print(Fore.GREEN + "|  |  ___/  /   ___   \   __ \  \   __ \  \       \ \  / /\ \  / /    | |    | | |  __  \   | |  | | |")
+    print(Fore.GREEN + "|  | |     /  /     \  \  \ \/  /   \ \/  /        \ \/ /  \ \/ /      \ \__/ /  | |  \  \  | |_/ /  |")
+    print(Fore.GREEN + "|  |_|    /__/       \__\  \___/     \___/          \__/    \__/        \____/   |_|   \__\ |____/   |")
+    print(Fore.GREEN + "|____________________________________________________________________________________________________|")
+    print(" ")
+    print(" ")
+    print(Fore.BLUE + "Your Personal Password Manager")
+    print(" ")
+    print(" ")
+    time.sleep(1)
+
+
+logo()
 # welcome message
 name = input("Input your name: ").lower()
 print("Hi " + name + ", Welcome to your personal password manager!")
@@ -171,7 +197,7 @@ the password: ").lower()
                     password_manager_worksheet.find(find_account))
                 number_of_accounts = password_manager_worksheet.col_values(1)
                 length_of_col = len(number_of_accounts)
-                if length_of_col >= 10:
+                if (length_of_col - cell_of_account[7:9]) >= 10:
                     column_of_account = int(cell_of_account[10]) + 2
                     row_of_account = cell_of_account[7:9]
                 elif length_of_col <= 9:
