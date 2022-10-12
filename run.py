@@ -195,8 +195,12 @@ the password: ").lower()
                     'password_manager')
                 cell_of_account = str(
                     password_manager_worksheet.find(find_account))
-                column_of_account = int(cell_of_account[9]) + 2
-                row_of_account = cell_of_account[7]
+                if (cell_of_account[8]) == 'C':
+                    column_of_account = int(cell_of_account[9]) + 2
+                    row_of_account = cell_of_account[7]
+                else:
+                    column_of_account = int(cell_of_account[10]) + 2
+                    row_of_account = cell_of_account[7:9]
                 new_password = input("input your new password: ")
                 # update cell of account
                 password_manager_worksheet.update_cell(
