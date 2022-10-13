@@ -22,7 +22,7 @@ SHEET = GSPREAD_CLIENT.open('ci_pp3_ppm')
 
 def logo():
     """
-    Display game name
+    Display password logo in green
     """
     print(" ")
     print(Fore.BLUE + "Welcome to:")
@@ -53,12 +53,17 @@ print("Hi " + name + ", Welcome to your personal password manager!")
 # they want to create an account or login to an existing account.
 
 
+def login() -> str:
+    answer = input("Create account or Login ").lower()
+    return answer
+
+
 def main():
     """
     This function it to return the user to the create account
     or login screen if they have an account already set up.
     """
-    answer = input("Create account or Login ").lower()
+    answer = login()
 
     if answer == "create account":
         from validate_password import validate_password
