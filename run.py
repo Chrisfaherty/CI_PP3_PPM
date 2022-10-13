@@ -64,6 +64,17 @@ def check_for_master_account():
     return check_for_account
 
 
+def view_passwords():
+    """
+    This Function is used to pull the passwords from
+    the database and display them in the terminal.
+    """
+    print("Retriving passwords!... ")
+    all_passwords = SHEET.worksheet(
+        "password_manager").get_all_values()
+    return all_passwords
+
+
 def main():
     """
     This function it to return the user to the create account
@@ -132,17 +143,8 @@ def main():
             option = input('Type 1, 2, 3, 4 or 5: ')
             if option == "1":
                 print("You selected to view your passwords")
-
-                def view_passwords():
-                    """
-                    This Function is used to pull the passwords from
-                    the database and display them in the terminal.
-                    """
-                    print("Retriving passwords!... ")
-                    all_passwords = SHEET.worksheet(
-                        "password_manager").get_all_values()
-                    pprint.pprint(all_passwords)
-                view_passwords()
+                all_passwords = view_passwords()
+                pprint.pprint(all_passwords)
                 options()
 
             elif option == "2":
