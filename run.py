@@ -94,6 +94,17 @@ def add_passwords():
     return new_website, current_stored_website
 
 
+def update_password_manager_worksheet(new_data):
+    """
+    Update password_manager worksheet
+    with the master data
+    """
+    print("Updating password_manager worksheet ...\n")
+    password_manager_worksheet = SHEET.worksheet('password_manager')
+    password_manager_worksheet.append_row(new_data)
+    print("password manager updated sucessfully.\n")
+
+
 def edit_passwords():
     find_account = input("Account you would like to edit \
 the password: ").lower()
@@ -223,20 +234,9 @@ differenciate it from the others')
                                 break
                         return new_website, new_username, new_password
 
-                    def update_password_manager_worksheet(new_data):
-                        """
-                        Update password_manager worksheet
-                        with the master data
-                        """
-                        print("Updating password_manager worksheet ...\n")
-                        password_manager_worksheet = SHEET.worksheet(
-                            'password_manager')
-                        password_manager_worksheet.append_row(new_data)
-                        print("password manager updated sucessfully.\n")
-
                     new_data = store_password()
-                    print(new_data)
                     update_password_manager_worksheet(new_data)
+                    print(new_data)
                     options()
 
             elif option == "3":
