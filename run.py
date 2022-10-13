@@ -58,6 +58,12 @@ def login() -> str:
     return answer
 
 
+def check_for_master_account():
+    settings_worksheet = SHEET.worksheet('settings')
+    check_for_account = settings_worksheet.acell('B2').value
+    return check_for_account
+
+
 def main():
     """
     This function it to return the user to the create account
@@ -73,8 +79,7 @@ def main():
             Create the master pwd and username for your
             personal pwd manager account
             """
-            settings_worksheet = SHEET.worksheet('settings')
-            check_for_account = settings_worksheet.acell('B2').value
+            check_for_account = check_for_master_account()
             while True:
                 if check_for_account is None:
                     master_account_username = input("Create your\
