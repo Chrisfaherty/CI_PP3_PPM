@@ -94,6 +94,25 @@ def add_passwords():
     return new_website, current_stored_website
 
 
+def edit_passwords():
+    find_account = input("Account you would like to edit \
+the password: ").lower()
+    password_manager_worksheet = SHEET.worksheet(
+        'password_manager')
+    cell_of_account = str(
+        password_manager_worksheet.find(find_account))
+    if (cell_of_account[8]) == 'C':
+        column_of_account = int(cell_of_account[9]) + 2
+        row_of_account = cell_of_account[7]
+    else:
+        column_of_account = int(cell_of_account[10]) + 2
+        row_of_account = cell_of_account[7:9]
+    new_password = input("input your new password: ")
+    # update cell of account
+    password_manager_worksheet.update_cell(
+        row_of_account, column_of_account, new_password)
+
+
 def main():
     """
     This function it to return the user to the create account
@@ -210,22 +229,7 @@ differenciate it from the others')
 
             elif option == "3":
                 print("You selected to edit a password")
-                find_account = input("Account you would like to edit \
-the password: ").lower()
-                password_manager_worksheet = SHEET.worksheet(
-                    'password_manager')
-                cell_of_account = str(
-                    password_manager_worksheet.find(find_account))
-                if (cell_of_account[8]) == 'C':
-                    column_of_account = int(cell_of_account[9]) + 2
-                    row_of_account = cell_of_account[7]
-                else:
-                    column_of_account = int(cell_of_account[10]) + 2
-                    row_of_account = cell_of_account[7:9]
-                new_password = input("input your new password: ")
-                # update cell of account
-                password_manager_worksheet.update_cell(
-                        row_of_account, column_of_account, new_password)
+                edit_passwords()
                 options()
 
             elif option == "4":
