@@ -189,7 +189,7 @@ def main():
 
         def options():
             """function used to return to the option input"""
-            print(" Type 1: View, 2: Add, 3: Edit, 4: edit master pwd, 5: exit")
+            print(" Type 1: View, 2: Add, 3: Edit, 4: edit mr pwd, 5: exit")
             option = input(' Type 1, 2, 3, 4 or 5: \n ')
             if option == "1":
                 print(" Viewing your passwords")
@@ -201,7 +201,7 @@ def main():
                 print(" Adding a new password")
                 new_website, current_stored_website = add_passwords()
                 if str(new_website) in str(current_stored_website):
-                    print(f" {new_website} already exsists.")
+                    print(f" {new_website} already exists.")
                     print(' Try adding a digit after the name')
                     print(' Make it different to the others')
                     options()
@@ -221,8 +221,7 @@ def main():
                             new_password = input(" Input password: \n ")
                             password_to_validate = new_password
                             if validate_password(password_to_validate):
-                                print(f" Storing password \
-                                    {new_password} ...\n")
+                                print(f" Storing password {new_password}\n")
                                 break
                         return new_website, new_username, new_password
            
