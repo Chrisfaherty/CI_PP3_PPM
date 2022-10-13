@@ -3,8 +3,8 @@ These module were imported to allow the code to connect with the google
 sheet.
 """
 import pprint
-import gspread
 import time
+import gspread
 from colorama import Fore
 from google.oauth2.service_account import Credentials
 from validate_password import validate_password
@@ -24,6 +24,7 @@ SHEET = GSPREAD_CLIENT.open('ci_pp3_ppm')
 def logo():
     """
     Display password logo in green
+    and Font in cyan.
     """
     print(" ")
     print(Fore.CYAN + " Welcome to:")
@@ -58,10 +59,10 @@ def setup() -> str:
     """
     To get input from the user if they want to create account or log in
     """
-    print(" Create an account if you have not yet created one.")
-    print(" If you have an account please log in.")
+    print(" Create an account if you have not yet created one.\n")
+    print(" If you have an account please log in.\n")
     print(" To continue type: ")
-    answer = input(" Create account or Login?: \n ").lower()
+    answer = input(" 'Create account' or 'Login': \n ").lower()
     return answer
 
 
@@ -78,6 +79,7 @@ def login():
     """
     This function allows you to login to the account.
     """
+    print("To login input your master details below: \n")
     login_username = input(' Input your username: \n ')
     login_password = input(' Input your password: \n ')
     settings_worksheet = SHEET.worksheet('settings')
@@ -169,20 +171,25 @@ def main():
             check_for_account = check_for_master_account()
             while True:
                 if check_for_account is None:
-                    master_account_username = input(" Master username: \n ")
+                    print(" Create a master account username below:")
+                    master_account_username = input(" Username: \n ")
                     print(f" Storing username {master_account_username} ...\n")
                     while True:
-                        master_account_password = input(" Master password: \n")
+                        print(" Create a master account password below:")
+                        print(" Password must contain 8 characters or more:")
+                        print(" Must contain at least one of each:")
+                        print(" Lowercase, Uppercase, Number & special '@$_' ")
+                        master_account_password = input(" Password: \n")
                         password_to_validate = master_account_password
                         if validate_password(password_to_validate):
-                            print(f" Storing password \
-                                {master_account_password} ...\n")
+                            print(" Storing password ...\n")
                             break
                 else:
                     should_restart = True
                     break
 
                 return name, master_account_username, master_account_password
+            options()
             if should_restart:
                 print(" Account already set up try log in")
                 main()

@@ -28,10 +28,12 @@ def validate_password(password_to_validate: str) -> bool:
                 spec += 1       
         if (low >= 1 and upp >= 1 and spec >= 1 and dgt >= 1 and
                 low + spec + upp + dgt == len(s)):
-            print("Valid Password")
+            print(" Valid Password")
         else:
-            print("Invalid Password")
-            print("Must be 8 + characters, lower, upper, number & special @$_")
+            print(" Invalid Password")
+            print(" Your password must contain 8 characters or more:")
+            print(" It must contain at least one of each of the following:")
+            print(" Lowercase, Uppercase, Number & special '@$_'")
             return False
 
         return True
