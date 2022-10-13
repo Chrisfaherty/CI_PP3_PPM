@@ -7,6 +7,7 @@ import gspread
 import time
 from colorama import Fore
 from google.oauth2.service_account import Credentials
+from validate_password import validate_password
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -72,6 +73,7 @@ def login():
     actual_password = settings_worksheet.acell('C2').value
     return login_username, login_password, actual_username, actual_password
 
+
 def view_passwords():
     """
     This Function is used to pull the passwords from
@@ -83,6 +85,15 @@ def view_passwords():
     return all_passwords
 
 
+def add_passwords():
+    new_website = input("Input the website: ").lower()
+    password_manager_worksheet = SHEET.worksheet(
+        'password_manager')
+    current_stored_website = password_manager_worksheet.find(
+        new_website)
+    return new_website, current_stored_website
+
+
 def main():
     """
     This function it to return the user to the create account
@@ -90,8 +101,7 @@ def main():
     """
     answer = setup()
 
-    if answer == "create account":
-        from validate_password import validate_password
+    if answer == "create account":     
 
         def create_master_account():
             """
@@ -154,11 +164,7 @@ def main():
 
             elif option == "2":
                 print("You selected to add a new password")
-                new_website = input("Input the website: ").lower()
-                password_manager_worksheet = SHEET.worksheet(
-                            'password_manager')
-                current_stored_website = password_manager_worksheet.find(
-                    new_website)
+                new_website, current_stored_website = add_passwords()
                 if str(new_website) in str(current_stored_website):
                     print(f"{new_website} already exsists.")
                     print('Try adding a digit aftwer the name to \
