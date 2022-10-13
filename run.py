@@ -58,7 +58,9 @@ def setup() -> str:
     """
     To get input from the user if they want to create account or log in
     """
-    
+    print(" Create an account if you have not yet created one.")
+    print(" If you have an account please log in.")
+    print(" To continue type: ")
     answer = input(" Create account or Login?: \n ").lower()
     return answer
 
@@ -73,6 +75,9 @@ def check_for_master_account():
 
 
 def login():
+    """
+    This function allows you to login to the account.
+    """
     login_username = input(' Input your username: \n ')
     login_password = input(' Input your password: \n ')
     settings_worksheet = SHEET.worksheet('settings')
