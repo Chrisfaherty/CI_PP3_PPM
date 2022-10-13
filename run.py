@@ -47,7 +47,7 @@ def logo():
 
 logo()
 # welcome message
-name = input("Input your name:\n").lower()
+name = input("Input your name: \n ").lower()
 print("Hi " + name + ", Welcome to your personal password manager!")
 
 # This if statemant will be used for the log in screen to see if
