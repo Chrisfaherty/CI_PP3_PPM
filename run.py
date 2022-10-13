@@ -146,7 +146,6 @@ def main():
                 options()
 
             elif option == "2":
-                from validate_password import validate_password
                 print("You selected to add a new password")
                 new_website = input("Input the website: ").lower()
                 password_manager_worksheet = SHEET.worksheet(
@@ -173,10 +172,10 @@ differenciate it from the others')
 
                         while True:
                             new_password = input("Input your password: ")
-                            if validate_password(new_password):
-                                password_to_validate = new_password
-                                validate_password(password_to_validate)
-                                print(f"Storing password {new_password} ...\n")
+                            password_to_validate = new_password
+                            if validate_password(password_to_validate):
+                                print(f"Storing password \
+                                    {new_password} ...\n")
                                 break
                         return new_website, new_username, new_password
 
