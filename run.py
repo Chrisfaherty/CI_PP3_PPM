@@ -26,7 +26,7 @@ def logo():
     Display password logo in green
     """
     print(" ")
-    print(Fore.BLUE + "Welcome to:")
+    print(Fore.CYAN + "Welcome to:")
     print(" ")
     print(Fore.GREEN + " _______________________________________________ ")
     print(Fore.GREEN + "|    ____    __                  __   _____     |")
@@ -39,7 +39,7 @@ def logo():
     print(Fore.GREEN + "|_______________________________________________|")
     print(" ")
     print(" ")
-    print(Fore.BLUE + "Your Personal Password Manager")
+    print(Fore.CYAN + "Your Personal Password Manager")
     print(" ")
     print(" ")
     time.sleep(1)
