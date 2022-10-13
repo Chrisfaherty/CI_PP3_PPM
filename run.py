@@ -113,6 +113,18 @@ the password: ").lower()
         row_of_account, column_of_account, new_password)
 
 
+def edit_master_password():
+    find_account = input("Account name you would like\
+to edit the password: ").lower()
+    settings_worksheet = SHEET.worksheet('settings')
+    cell_of_account = str(settings_worksheet.find(find_account))
+    column_of_account = int(cell_of_account[9]) + 2
+    row_of_account = cell_of_account[7]
+    new_password = input("input your new password: ")
+    settings_worksheet.update_cell(
+        row_of_account, column_of_account, new_password)
+    
+
 def main():
     """
     This function it to return the user to the create account
@@ -234,16 +246,7 @@ differenciate it from the others')
 
             elif option == "4":
                 print("You selected to edit master password")
-                find_account = input("Account name you would like\
-to edit the password: ").lower()
-                settings_worksheet = SHEET.worksheet('settings')
-                cell_of_account = str(settings_worksheet.find(find_account))
-                column_of_account = int(cell_of_account[9]) + 2
-                row_of_account = cell_of_account[7]
-                new_password = input("input your new password: ")
-                # update cell of account
-                settings_worksheet.update_cell(
-                    row_of_account, column_of_account, new_password)
+                edit_master_password()
                 options()
 
             elif option == "5":
