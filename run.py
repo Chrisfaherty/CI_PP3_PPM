@@ -26,7 +26,7 @@ def logo():
     Display password logo in green
     """
     print(" ")
-    print(Fore.CYAN + "Welcome to:")
+    print(Fore.CYAN + " Welcome to:")
     print(" ")
     print(Fore.GREEN + " _______________________________________________ ")
     print(Fore.GREEN + "|    ____    __                  __   _____     |")
@@ -39,7 +39,7 @@ def logo():
     print(Fore.GREEN + "|_______________________________________________|")
     print(" ")
     print(" ")
-    print(Fore.CYAN + "Your Personal Password Manager")
+    print(Fore.CYAN + " Your Personal Password Manager")
     print(" ")
     print(" ")
     time.sleep(1)
@@ -48,7 +48,7 @@ def logo():
 logo()
 # welcome message
 name = input(" Input your name: \n ").lower()
-print("Hi " + name + ", Welcome to your personal password manager!")
+print(" Hi " + name + ", Welcome to your personal password manager!")
 
 # This if statemant will be used for the log in screen to see if
 # they want to create an account or login to an existing account.
@@ -79,7 +79,7 @@ def view_passwords():
     This Function is used to pull the passwords from
     the database and display them in the terminal.
     """
-    print("Retriving passwords!... ")
+    print(" Retriving passwords!... ")
     all_passwords = SHEET.worksheet("password_manager").get_all_values()
     return all_passwords
 
@@ -97,10 +97,10 @@ def update_password_manager_worksheet(new_data):
     Update password_manager worksheet
     with the master data
     """
-    print("Updating password_manager worksheet ...\n")
+    print(" Updating password_manager worksheet ...\n")
     password_manager_worksheet = SHEET.worksheet('password_manager')
     password_manager_worksheet.append_row(new_data)
-    print("password manager updated sucessfully.\n")
+    print(" password manager updated sucessfully.\n")
 
 
 def edit_passwords():
@@ -165,7 +165,7 @@ def main():
 
                 return name, master_account_username, master_account_password
             if should_restart:
-                print("Account already set up try log in")
+                print(" Account already set up try log in")
                 main()
 
         def update_settings_worksheet(master_data):
@@ -182,28 +182,28 @@ def main():
             = login()
         if login_username == actual_username\
                 and login_password == actual_password:
-            print("login.....")
+            print(" login.....")
         else:
-            print("Username and password didn't match our records")
+            print(" Username and password didn't match our records")
             main()
 
         def options():
             """function used to return to the option input"""
-            print("Type 1: View, 2: Add, 3: Edit, 4: edit master pwd, 5: exit")
-            option = input( 'Type 1, 2, 3, 4 or 5: \n ')
+            print(" Type 1: View, 2: Add, 3: Edit, 4: edit master pwd, 5: exit")
+            option = input(' Type 1, 2, 3, 4 or 5: \n ')
             if option == "1":
-                print("Viewing your passwords")
+                print(" Viewing your passwords")
                 all_passwords = view_passwords()
                 pprint.pprint(all_passwords)
                 options()
 
             elif option == "2":
-                print("Adding a new password")
+                print(" Adding a new password")
                 new_website, current_stored_website = add_passwords()
                 if str(new_website) in str(current_stored_website):
-                    print(f"{new_website} already exsists.")
-                    print('Try adding a digit after the name')
-                    print('Make it different to the others')
+                    print(f" {new_website} already exsists.")
+                    print(' Try adding a digit after the name')
+                    print(' Make it different to the others')
                     options()
 
                 else:
@@ -213,15 +213,15 @@ def main():
                         store a new website, username & password 
                         into the database.
                         """
-                        print(f"Storing website {new_website} ...\n")
-                        new_username = input("Input username: ")
-                        print(f"Storing username {new_username} ...\n")
+                        print(f" Storing website {new_website} ...\n")
+                        new_username = input(" Input username: \n ")
+                        print(f" Storing username {new_username} ...\n")
 
                         while True:
                             new_password = input(" Input password: \n ")
                             password_to_validate = new_password
                             if validate_password(password_to_validate):
-                                print(f"Storing password \
+                                print(f" Storing password \
                                     {new_password} ...\n")
                                 break
                         return new_website, new_username, new_password
@@ -232,24 +232,24 @@ def main():
                     options()
 
             elif option == "3":
-                print("Editing a password")
+                print(" Editing a password")
                 edit_passwords()
                 options()
 
             elif option == "4":
-                print("Editing master password")
+                print(" Editing master password")
                 edit_master_password()
                 options()
 
             elif option == "5":
-                print("Loging out. Thank you, Good Bye!")
+                print(" Loging out. Thank you, Good Bye!")
                 main()
             else:
-                print("You did not enter a valid response!. ")
+                print(" You did not enter a valid response!. ")
                 options()
         options()
     else:
-        print("You did not enter a valid response!. ")
+        print(" You did not enter a valid response!. ")
         main()
 
 
