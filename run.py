@@ -53,7 +53,7 @@ print("Hi " + name + ", Welcome to your personal password manager!")
 # they want to create an account or login to an existing account.
 
 
-def login() -> str:
+def setup() -> str:
     answer = input("Create account or Login ").lower()
     return answer
 
@@ -63,6 +63,14 @@ def check_for_master_account():
     check_for_account = settings_worksheet.acell('B2').value
     return check_for_account
 
+
+def login():
+    login_username = input('Input your username: ')
+    login_password = input('Input your password: ')
+    settings_worksheet = SHEET.worksheet('settings')
+    actual_username = settings_worksheet.acell('B2').value
+    actual_password = settings_worksheet.acell('C2').value
+    return login_username, login_password, actual_username, actual_password
 
 def view_passwords():
     """
@@ -80,7 +88,7 @@ def main():
     This function it to return the user to the create account
     or login screen if they have an account already set up.
     """
-    answer = login()
+    answer = setup()
 
     if answer == "create account":
         from validate_password import validate_password
@@ -124,11 +132,8 @@ def main():
     # The functions below here will be for the steps
     # that will occure once logged in.
     elif answer == "login":
-        login_username = input('Input your username: ')
-        login_password = input('Input your password: ')
-        settings_worksheet = SHEET.worksheet('settings')
-        actual_username = settings_worksheet.acell('B2').value
-        actual_password = settings_worksheet.acell('C2').value
+        login_username, login_password, actual_username,\
+            actual_password = login()
         if login_username == actual_username\
                 and login_password == actual_password:
             print("login.....")
