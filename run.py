@@ -88,9 +88,8 @@ def main():
                     while True:
                         master_account_password = input("create your\
                              master password: ")
-                        if validate_password(master_account_password):
-                            password_to_validate = master_account_password
-                            validate_password(password_to_validate)
+                        password_to_validate = master_account_password
+                        if validate_password(password_to_validate):
                             print(f"Storing password \
                                 {master_account_password} ...\n")
                             break
