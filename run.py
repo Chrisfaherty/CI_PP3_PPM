@@ -55,11 +55,18 @@ print(" Hi " + name + ", Welcome to your personal password manager!")
 
 
 def setup() -> str:
-    answer = input(" Create account or Login: \n ").lower()
+    """
+    To get input from the user if they want to create account or log in
+    """
+    
+    answer = input(" Create account or Login?: \n ").lower()
     return answer
 
 
 def check_for_master_account():
+    """
+    To get input from the user if they want to create account or log in
+    """
     settings_worksheet = SHEET.worksheet('settings')
     check_for_account = settings_worksheet.acell('B2').value
     return check_for_account
@@ -85,6 +92,9 @@ def view_passwords():
 
 
 def add_passwords():
+    """
+    Add new websites to the google sheet
+    """
     new_website = input(" Input the website: \n ").lower()
     password_manager_worksheet = SHEET.worksheet('password_manager')
     current_stored_website = password_manager_worksheet.find(
@@ -104,6 +114,9 @@ def update_password_manager_worksheet(new_data):
 
 
 def edit_passwords():
+    """
+    Edit the passwords in the google sheet
+    """
     find_account = input(" Account's password to edit: \n ").lower()
     password_manager_worksheet = SHEET.worksheet('password_manager')
     cell_of_account = str(
@@ -121,6 +134,9 @@ def edit_passwords():
 
 
 def edit_master_password():
+    """
+    Edit the master password in the google sheet
+    """
     find_account = input(" Enter your name: \n ").lower()
     settings_worksheet = SHEET.worksheet('settings')
     cell_of_account = str(settings_worksheet.find(find_account))
@@ -148,15 +164,13 @@ def main():
             check_for_account = check_for_master_account()
             while True:
                 if check_for_account is None:
-                    master_account_username = input(" Create your\
-                        manager username: \n ")
-                    print(f"Storing username {master_account_username} ...\n")
+                    master_account_username = input(" Master username: \n ")
+                    print(f" Storing username {master_account_username} ...\n")
                     while True:
-                        master_account_password = input(" Create your\
-                             master password: \n ")
+                        master_account_password = input(" Master password: \n")
                         password_to_validate = master_account_password
                         if validate_password(password_to_validate):
-                            print(f"Storing password \
+                            print(f" Storing password \
                                 {master_account_password} ...\n")
                             break
                 else:
