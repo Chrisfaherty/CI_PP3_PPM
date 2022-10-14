@@ -68,7 +68,7 @@ def setup() -> str:
     return answer
 
 
-def check_for_master_account():
+def check_for_master_account() -> str:
     """
     To get input from the user if they want to create account or log in
     """
@@ -77,7 +77,7 @@ def check_for_master_account():
     return check_for_account
 
 
-def login():
+def login() -> str:
     """
     This function allows you to login to the account.
     """
@@ -90,7 +90,7 @@ def login():
     return login_username, login_password, actual_username, actual_password
 
 
-def view_passwords():
+def view_passwords() -> str:
     """
     This Function is used to pull the passwords from
     the database and display them in the terminal.
@@ -100,7 +100,7 @@ def view_passwords():
     return all_passwords
 
 
-def add_passwords():
+def add_passwords() -> str:
     """
     Add new websites to the google sheet
     """
@@ -122,7 +122,7 @@ def update_password_manager_worksheet(new_data):
     print(Fore.GREEN + " password manager updated sucessfully.\n")
 
 
-def edit_passwords():
+def edit_passwords() -> str:
     """
     Edit the passwords in the google sheet
     """
@@ -145,7 +145,7 @@ def edit_passwords():
         print(Fore.RED + "This account does not exsist")
 
 
-def edit_master_password():
+def edit_master_password() -> str:
     """
     Edit the master password in the google sheet
     """
