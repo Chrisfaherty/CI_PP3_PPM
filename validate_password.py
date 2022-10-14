@@ -2,6 +2,7 @@
 This function is called when ever a password is being created in the
 run.py file to make sure they are valid passwords.
 """
+from colorama import Fore
 
 
 def validate_password(password_to_validate: str) -> bool:
@@ -36,10 +37,10 @@ def validate_password(password_to_validate: str) -> bool:
                 low + spec + upp + dgt == len(s)):
             print(" Valid Password \n")
         else:
-            print(" Invalid Password \n")
-            print(" Your password must contain 8 characters or more:")
-            print(" It must contain at least one of each of the following:")
-            print(" Lowercase, Uppercase, Number & special '@$_'\n ")
+            print(Fore.RED + " Invalid Password \n")
+            print(Fore.RED + " Must contain 8 characters or more:")
+            print(Fore.RED + " At least one of each of the following:")
+            print(Fore.RED + " Lowercase, Upper, Number & special '@$_'\n ")
 
             return False
 

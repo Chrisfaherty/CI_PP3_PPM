@@ -50,7 +50,7 @@ logo()
 # welcome message
 name = input(" Input your name: \n ").lower()
 print(Fore.MAGENTA + " Hi " + name + ", Welcome to your\
-personal password manager! \n")
+ personal password manager! \n")
 
 # This if statemant will be used for the log in screen to see if
 # they want to create an account or login to an existing account.
@@ -104,7 +104,7 @@ def add_passwords():
     """
     Add new websites to the google sheet
     """
-    new_website = input(" Input the website: \n ").lower()
+    new_website = input(Fore.MAGENTA + " Input the website: \n ").lower()
     password_manager_worksheet = SHEET.worksheet('password_manager')
     current_stored_website = password_manager_worksheet.find(
         new_website)
@@ -149,15 +149,12 @@ def edit_master_password():
     """
     Edit the master password in the google sheet
     """
-    find_account = input(" Enter your name: \n ").lower()
+    find_account = input(Fore.MAGENTA + " Enter your name: \n ").lower()
     settings_worksheet = SHEET.worksheet('settings')
-    cell_of_account = str(settings_worksheet.find(find_account))
+    cell_of_account = str(settings_worksheet.acell('A2').value)
     if find_account in cell_of_account:
-        column_of_account = int(cell_of_account[9]) + 2
-        row_of_account = cell_of_account[7]
         new_password = input(" New password: \n ")
-        settings_worksheet.update_cell(
-            row_of_account, column_of_account, new_password)
+        settings_worksheet.update('C2', new_password)
     else:
         print(Fore.RED + "This account does not exsist \n ")
         print(Fore.RED + "Please try again")
