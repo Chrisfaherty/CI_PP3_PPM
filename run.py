@@ -49,7 +49,7 @@ def logo():
 logo()
 # welcome message
 name = input(" Input your name: \n ").lower()
-print(" Hi " + name + ", Welcome to your personal password manager!")
+print(" Hi " + name + ", Welcome to your personal password manager! \n")
 
 # This if statemant will be used for the log in screen to see if
 # they want to create an account or login to an existing account.
@@ -80,7 +80,7 @@ def login():
     This function allows you to login to the account.
     """
     print("To login input your master details below: \n")
-    login_username = input(' Input your username: \n ')
+    login_username = input(' Input your username: \n ').lower()
     login_password = input(' Input your password: \n ')
     settings_worksheet = SHEET.worksheet('settings')
     actual_username = settings_worksheet.acell('B2').value
@@ -128,7 +128,8 @@ def edit_passwords():
     password_manager_worksheet = SHEET.worksheet('password_manager')
     cell_of_account = str(
         password_manager_worksheet.find(find_account))
-    if find_account is None: 
+    print(find_account)
+    if find_account in cell_of_account:
         if (cell_of_account[8]) == 'C':
             column_of_account = int(cell_of_account[9]) + 2
             row_of_account = cell_of_account[7]
@@ -136,11 +137,10 @@ def edit_passwords():
             column_of_account = int(cell_of_account[10]) + 2
             row_of_account = cell_of_account[7:9]
         new_password = input(" New password: \n ")
-        # update cell of account
         password_manager_worksheet.update_cell(
             row_of_account, column_of_account, new_password)
     else:
-        print("This account does not exsist")   
+        print("This account does not exsist")
 
 
 def edit_master_password():
@@ -168,7 +168,7 @@ def main():
     """
     answer = setup()
 
-    if answer == "create account":     
+    if answer == "create account":
 
         def create_master_account():
             """
@@ -190,7 +190,9 @@ def main():
                     if validate_password(password_to_validate):
                         print(" Storing password...\n")
                         print(" Password Stored \n")
-                        
+                        print('Remember these details to login \n')
+                        print("Only 1 account can be stored: \n")
+
                         return name, master_account_username,\
                             master_account_password
                 else:
@@ -240,7 +242,7 @@ def main():
 
                     def store_password():
                         """
-                        store a new website, username & password 
+                        store a new website, username & password
                         into the database.
                         """
                         print(f" Storing website {new_website} ...\n")
@@ -254,7 +256,7 @@ def main():
                                 print(f" Storing password {new_password}\n")
                                 break
                         return new_website, new_username, new_password
-           
+
                     new_data = store_password()
                     update_password_manager_worksheet(new_data)
                     print(new_data)
