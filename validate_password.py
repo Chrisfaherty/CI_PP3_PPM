@@ -1,8 +1,14 @@
+"""
+This function is called when ever a password is being created in the
+run.py file to make sure they are valid passwords.
+"""
+
+
 def validate_password(password_to_validate: str) -> bool:
     """
     Inside the try, checks to make sure the password contains a
     capital letter, lowercase letter & a special character.
-    Raises ValueError if the password does not contain 
+    Raises ValueError if the password does not contain
     a lowercase & uppercase,mor if there aren't more than 6 values.
     credits geeksforgeeks.org
     """
@@ -28,14 +34,13 @@ def validate_password(password_to_validate: str) -> bool:
                 spec += 1       
         if (low >= 1 and upp >= 1 and spec >= 1 and dgt >= 1 and
                 low + spec + upp + dgt == len(s)):
-            print(" Valid Password")
+            print(" Valid Password \n")
         else:
-            print(" Invalid Password")
+            print(" Invalid Password \n")
             print(" Your password must contain 8 characters or more:")
             print(" It must contain at least one of each of the following:")
-            print(" Lowercase, Uppercase, Number & special '@$_' ")
+            print(" Lowercase, Uppercase, Number & special '@$_'\n ")
 
             return False
 
         return True
-

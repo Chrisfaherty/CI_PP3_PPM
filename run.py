@@ -49,7 +49,8 @@ def logo():
 logo()
 # welcome message
 name = input(" Input your name: \n ").lower()
-print(" Hi " + name + ", Welcome to your personal password manager! \n")
+print(Fore.MAGENTA + " Hi " + name + ", Welcome to your\
+personal password manager! \n")
 
 # This if statemant will be used for the log in screen to see if
 # they want to create an account or login to an existing account.
@@ -59,9 +60,10 @@ def setup() -> str:
     """
     To get input from the user if they want to create account or log in
     """
-    print(" Create an account if you have not yet created one.\n")
-    print(" If you have an account please log in.\n")
-    print(" To continue type: ")
+    print(Fore.MAGENTA + " Create an account if you have\
+ not yet created one.\n")
+    print(Fore.MAGENTA + " If you have an account please log in.\n")
+    print(Fore.MAGENTA + " To continue type: ")
     answer = input(" 'Create account' or 'Login': \n ").lower()
     return answer
 
@@ -79,7 +81,7 @@ def login():
     """
     This function allows you to login to the account.
     """
-    print("To login input your master details below: \n")
+    print(Fore.MAGENTA + "To login input your master details below: \n")
     login_username = input(' Input your username: \n ').lower()
     login_password = input(' Input your password: \n ')
     settings_worksheet = SHEET.worksheet('settings')
@@ -93,7 +95,7 @@ def view_passwords():
     This Function is used to pull the passwords from
     the database and display them in the terminal.
     """
-    print(" Retriving passwords!... ")
+    print(Fore.MAGENTA + " Retriving passwords!... ")
     all_passwords = SHEET.worksheet("password_manager").get_all_values()
     return all_passwords
 
@@ -114,10 +116,10 @@ def update_password_manager_worksheet(new_data):
     Update password_manager worksheet
     with the master data
     """
-    print(" Updating password_manager worksheet ...\n")
+    print(Fore.MAGENTA + " Updating password_manager worksheet ...\n")
     password_manager_worksheet = SHEET.worksheet('password_manager')
     password_manager_worksheet.append_row(new_data)
-    print(" password manager updated sucessfully.\n")
+    print(Fore.GREEN + " password manager updated sucessfully.\n")
 
 
 def edit_passwords():
@@ -140,7 +142,7 @@ def edit_passwords():
         password_manager_worksheet.update_cell(
             row_of_account, column_of_account, new_password)
     else:
-        print("This account does not exsist")
+        print(Fore.RED + "This account does not exsist")
 
 
 def edit_master_password():
@@ -157,8 +159,8 @@ def edit_master_password():
         settings_worksheet.update_cell(
             row_of_account, column_of_account, new_password)
     else:
-        print("This account does not exsist \n ")
-        print("Please try again")
+        print(Fore.RED + "This account does not exsist \n ")
+        print(Fore.RED + "Please try again")
 
 
 def main():
@@ -178,25 +180,26 @@ def main():
             check_for_account = check_for_master_account()
             while True:
                 if check_for_account is None:
-                    print(" Create a master account username below:")
-                    master_account_username = input(" Username: \n ").lower()
-                    print(f" Storing username {master_account_username} ...\n")
-                    print(" Create a master account password below:")
-                    print(" Password must contain 8 characters or more:\n")
-                    print(" Must contain at least one of each:")
-                    print(" Lowercase, Upper, Number & special '@$_' \n")
+                    print(Fore.MAGENTA + " Create a username below:")
+                    master_account_username = input(" Username: \n").lower()
+                    print(Fore.MAGENTA + " Storing username ...\n")
+                    print(Fore.MAGENTA + " Create a password below: \n")
+                    print(Fore.MAGENTA + " Must be 8 characters or more: \n")
+                    print(Fore.MAGENTA + " Must contain one of each: \n")
+                    print(Fore.MAGENTA + " Lowercase, Uppercase")
+                    print(Fore.MAGENTA + " Number & special '@$_' \n")
                     master_account_password = input(" Password: \n")
                     password_to_validate = master_account_password
                     if validate_password(password_to_validate):
-                        print(" Storing password...\n")
-                        print(" Password Stored \n")
-                        print('Remember these details to login \n')
-                        print("Only 1 account can be stored: \n")
+                        print(Fore.MAGENTA + " Storing password...\n")
+                        print(Fore.GREEN + " Password Stored \n")
+                        print(Fore.WHITE + 'Remember the details to login \n')
+                        print(Fore.WHITE + "Only 1 account can be stored: \n")
 
                         return name, master_account_username,\
                             master_account_password
                 else:
-                    print(" Account already set up try log in")
+                    print(Fore.RED + " Account already set up try log in")
                     break
 
         def update_settings_worksheet(master_data):
@@ -214,28 +217,29 @@ def main():
             = login()
         if login_username == actual_username\
                 and login_password == actual_password:
-            print(" login.....")
+            print(Fore.GREEN + " logged in")
         else:
-            print(" Username and password didn't match our records")
+            print(Fore.RED + " Username and password didn't match our records")
             main()
 
         def options():
-            """function used to return to the option input"""
-            print(" Type 1: View, 2: Add, 3: Edit, 4: edit mr pwd, 5: exit")
+            """Function used to return to the option input"""
+            print(Fore.MAGENTA + " Type 1: View, 2: Add, 3: Edit,")
+            print(Fore.MAGENTA + "4: Edit master pwd, 5: Exit \n")
             option = input(' Type 1, 2, 3, 4 or 5: \n ')
             if option == "1":
-                print(" Viewing your passwords")
+                print(Fore.YELLOW + " Viewing your passwords \n")
                 all_passwords = view_passwords()
                 pprint.pprint(all_passwords)
                 options()
 
             elif option == "2":
-                print(" Adding a new password")
+                print(Fore.YELLOW + " Adding a new password \n")
                 new_website, current_stored_website = add_passwords()
                 if str(new_website) in str(current_stored_website):
-                    print(f" {new_website} already exists.")
-                    print(' Try adding a digit after the name')
-                    print(' Make it different to the others')
+                    print(Fore.RED + f" {new_website} already exists. \n")
+                    print(Fore.RED + ' Try adding a digit after the name')
+                    print(Fore.RED + ' Make it different to the others \n')
                     options()
 
                 else:
@@ -245,15 +249,15 @@ def main():
                         store a new website, username & password
                         into the database.
                         """
-                        print(f" Storing website {new_website} ...\n")
+                        print(Fore.MAGENTA + " Storing website...  \n")
                         new_username = input(" Input username: \n ")
-                        print(f" Storing username {new_username} ...\n")
+                        print(Fore.MAGENTA + " Storing username... \n")
 
                         while True:
                             new_password = input(" Input password: \n ")
                             password_to_validate = new_password
                             if validate_password(password_to_validate):
-                                print(f" Storing password {new_password}\n")
+                                print(Fore.MAGENTA + " Storing password... \n")
                                 break
                         return new_website, new_username, new_password
 
@@ -263,26 +267,27 @@ def main():
                     options()
 
             elif option == "3":
-                print(" Editing a password")
+                print(Fore.YELLOW + " Editing a password: \n")
                 edit_passwords()
                 options()
 
             elif option == "4":
-                print(" Editing master password")
+                print(Fore.YELLOW + " Editing master password: \n")
                 edit_master_password()
                 options()
 
             elif option == "5":
-                print(" Loging out. Thank you, Good Bye!")
+                print(Fore.YELLOW + " Loging out. Thank you, Good Bye! \n")
                 main()
             else:
-                print(" You did not enter a valid response!. ")
+                print(Fore.RED + " You did not enter a valid response!.\n")
                 options()
         options()
     else:
-        print(" You did not enter a valid response!. ")
+        print(Fore.RED + " You did not enter a valid response!. \n")
         main()
 
 
 if __name__ == "__main__":
     main()
+
