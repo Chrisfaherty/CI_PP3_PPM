@@ -128,16 +128,20 @@ def edit_passwords():
     password_manager_worksheet = SHEET.worksheet('password_manager')
     cell_of_account = str(
         password_manager_worksheet.find(find_account))
-    if (cell_of_account[8]) == 'C':
-        column_of_account = int(cell_of_account[9]) + 2
-        row_of_account = cell_of_account[7]
+    if find_account is None: 
+        if (cell_of_account[8]) == 'C':
+            column_of_account = int(cell_of_account[9]) + 2
+            row_of_account = cell_of_account[7]
+        else:
+            column_of_account = int(cell_of_account[10]) + 2
+            row_of_account = cell_of_account[7:9]
+        new_password = input(" New password: \n ")
+        # update cell of account
+        password_manager_worksheet.update_cell(
+            row_of_account, column_of_account, new_password)
     else:
-        column_of_account = int(cell_of_account[10]) + 2
-        row_of_account = cell_of_account[7:9]
-    new_password = input(" New password: \n ")
-    # update cell of account
-    password_manager_worksheet.update_cell(
-        row_of_account, column_of_account, new_password)
+        print("This account does not exsist")
+        
 
 
 def edit_master_password():
@@ -152,7 +156,7 @@ def edit_master_password():
     new_password = input(" New password: \n ")
     settings_worksheet.update_cell(
         row_of_account, column_of_account, new_password)
-    
+
 
 def main():
     """
