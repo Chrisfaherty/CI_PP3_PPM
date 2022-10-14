@@ -140,8 +140,7 @@ def edit_passwords():
         password_manager_worksheet.update_cell(
             row_of_account, column_of_account, new_password)
     else:
-        print("This account does not exsist")
-        
+        print("This account does not exsist")   
 
 
 def edit_master_password():
@@ -151,11 +150,15 @@ def edit_master_password():
     find_account = input(" Enter your name: \n ").lower()
     settings_worksheet = SHEET.worksheet('settings')
     cell_of_account = str(settings_worksheet.find(find_account))
-    column_of_account = int(cell_of_account[9]) + 2
-    row_of_account = cell_of_account[7]
-    new_password = input(" New password: \n ")
-    settings_worksheet.update_cell(
-        row_of_account, column_of_account, new_password)
+    if find_account in cell_of_account:
+        column_of_account = int(cell_of_account[9]) + 2
+        row_of_account = cell_of_account[7]
+        new_password = input(" New password: \n ")
+        settings_worksheet.update_cell(
+            row_of_account, column_of_account, new_password)
+    else:
+        print("This account does not exsist \n ")
+        print("Please try again")
 
 
 def main():
@@ -176,7 +179,7 @@ def main():
             while True:
                 if check_for_account is None:
                     print(" Create a master account username below:")
-                    master_account_username = input(" Username: \n ")
+                    master_account_username = input(" Username: \n ").lower()
                     print(f" Storing username {master_account_username} ...\n")
                     print(" Create a master account password below:")
                     print(" Password must contain 8 characters or more:\n")
