@@ -219,7 +219,7 @@ def main():
             print(Fore.RED + " Username and password didn't match our records")
             main()
 
-        def options():
+        def options() -> str:
             """Function used to return to the option input"""
             print(Fore.MAGENTA + " Type 1: View, 2: Add, 3: Edit,")
             print(Fore.MAGENTA + "4: Edit master pwd, 5: Exit \n")
