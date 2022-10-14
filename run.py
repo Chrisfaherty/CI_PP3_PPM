@@ -174,25 +174,21 @@ def main():
                     print(" Create a master account username below:")
                     master_account_username = input(" Username: \n ")
                     print(f" Storing username {master_account_username} ...\n")
-                    while True:
-                        print(" Create a master account password below:")
-                        print(" Password must contain 8 characters or more:")
-                        print(" Must contain at least one of each:")
-                        print(" Lowercase, Uppercase, Number & special '@$_' ")
-                        master_account_password = input(" Password: \n")
-                        password_to_validate = master_account_password
-                        if validate_password(password_to_validate):
-                            print(" Storing password ...\n")
-                            break
+                    print(" Create a master account password below:")
+                    print(" Password must contain 8 characters or more:\n")
+                    print(" Must contain at least one of each:")
+                    print(" Lowercase, Upper, Number & special '@$_' \n")
+                    master_account_password = input(" Password: \n")
+                    password_to_validate = master_account_password
+                    if validate_password(password_to_validate):
+                        print(" Storing password...\n")
+                        print(" Password Stored \n")
+                        
+                        return name, master_account_username,\
+                            master_account_password
                 else:
-                    should_restart = True
+                    print(" Account already set up try log in")
                     break
-
-                return name, master_account_username, master_account_password
-            options()
-            if should_restart:
-                print(" Account already set up try log in")
-                main()
 
         def update_settings_worksheet(master_data):
             """Update settings worksheet with the master data"""
@@ -202,6 +198,7 @@ def main():
         master_data = create_master_account()
         print(master_data)
         update_settings_worksheet(master_data)
+        main()
 
     elif answer == "login":
         login_username, login_password, actual_username, actual_password\
@@ -278,4 +275,5 @@ def main():
         main()
 
 
-main()
+if __name__ == "__main__":
+    main()
