@@ -73,19 +73,19 @@ With the pace of everything going digital and everyone having different accounts
 ### User Stories
 
 #### First-time  User
-1. I want to have a clear flow to the site,
-2. I want to be able to create a master username and password to protect my passwords.
-3. I want to have clear options displayed when dicisions are to be made.
-4. I want to be able to view all my passwords in an organised form.
-5. I want to be able to easly add new passwords.
-6. I want to be able to edit my master password or user passwords if required.
-7. I want to be able to get feedback if i enter something incorrectly. 
+1. I want to the password manager to flow and be easy to follow,
+2. I want to be able to create a master username and password to protect my passwords,
+3. I want to have clear options displayed when dicisions are to be made,
+4. I want to be able to view all my passwords in an organised form,
+5. I want to be able to easly add new passwords,
+6. I want to be able to edit my master password or user passwords if required,
+7. I want to be able to get feedback if i enter something incorrectly, 
 
 #### Site Owner
 8. I want users to enjoy the experiance to make their personal password manager,
-9. I want users to to easily navigate the site,
+9. I want users to easily navigate the site,
 10. I want users to be able to use the functions with out an issue,
-11. I want users to know if there was an issue and how to resolve it.
+11. I want users to know if there was an issue and how to resolve it,
 
 ## Technical Design
 
@@ -138,51 +138,93 @@ The following flowchart sumerises the structure of the password manager.
 ### Existing Features
 
 * Welcome Screen
+    * This welcome screen includes a logo front and center and a place to input your name to make it personal.
+    * User story: 1, 8.
 
 ![This is an screenshot of the Welcome Screen](docs/ppm_welcome_screen.png)
 
 * Main Screen
+    * The main screen is where the user is welcomed to the password manager.
+    * Information is displayed to explain what steps the user should take. 
+    * It also asks for the user to input its next step.
+    * User stories: 1, 3, 9.
 
 ![This is an screenshot of the main screen](docs/features/main_screen.png)
 
 * Create Account Screen & Google Sheet
+    * This is the process flow the user goes down when it selects create account at the main screen.
+    * The user is prompted to create a username and a password. 
+    * The user recieves criteria around what has to be included in the password for it to be valid.
+    * The user then is noitfied if the password is valid.
+    * The user is warned to make sure to remember their account details and it shows the account details for the last time.
+    * User stories: 1, 2, 3, 10.
 
 ![This is an screenshot of the create account screen](docs/features/create_account_screen.png)
 
 ![This is an screenshot of the settings google sheet](docs/features/settings_google_sheet.png)
 
 * Login Function Screen
+    * The login function prompts the user to input the username and password they created.
+    * Then it gives feedback if it was correct.
+    * Then it gives 5 options for the user to choose. 
+    * User stories: 1, 3, 9, 10.
 
 ![This is an screenshot of the login in screen](docs/features/login_screen.png)
 
 * Adding a website screen, Option 2:
+    * To get to this point the User input 2 in the login function screen.
+    * The user is prompted to input a website, a username and a password.
+    * The user is presented with the criteria to create a valid password.
+    * User stories: 3, 5, 9, 10.
 
 ![This is an screenshot of option 2](docs/features/adding_new_website_screen.png)
 ![This is an screenshot of the google sheet](docs/features/password_manager_google_sheet.png)
 
 * Viewing passwords screen, Option 1:
+    * To get to this point the user selected 1 in the login function screen.
+    * This function pulls the passwords that the user stored and displays them in the terminal.
+    * There is also a prompt to store a password if you have not yet done so.
+    * User stories: 3, 4, 9, 10.
 
 ![This is an screenshot of the viewing passwords screen](docs/features/view_passwords_screen.png)
 
  * Editing passwords screen, Option 3:
+    * To get to this point the user selected 3 in the login function screen.
+    * The function is used to edit / change a password on one of the stored websites.
+    * The user is requested to input the website they want to change the password for.
+    * The user then is prompted to input the new password.
+    * User stories: 3, 6, 9, 10.
 
 ![This is an screenshot of the editing passwords screen](docs/features/edit_password_screen.png)
 ![This is an screenshot of the updated settings sheet](docs/features/edit_password_example.png)
 
  * Editing master password screen, Option 4:
+    * To get to this point the user selected 4 in the login function screen.
+    * This function is used to edit the master password.
+    * The user is prompted to enter their name,
+    * Then they are prompted to enter the new password.
+    * They are then notified if the password was updated.
+    * User stories: 3, 6, 9, 10.
 
 ![This is an screenshot of the edit master password screen](docs/features/edit_master_password_screen.png)
 ![This is an screenshot of the updated settings excel sheet](docs/features/updated_settings_google_sheet.png)
 
  * Exiting to the login screen, Option 5:
+    * To get to this point the user selected 5 in the login function screen.
+    * This function returns the user to the main screen.
+    * User stories: 9, 10.
 
 ![This is an screenshot of the exit option screen](docs/features/edit_master_password_screen.png)
 
  * Error message for passwords:
+    * This is the prompt that shows if the user does not follow the create password criteria.
+    * User stories: 3, 7, 11.
 
 ![This is an screenshot of the exit option screen](docs/features/invalid_password_error_message.png)
 
 * Error message for invalid input:
+    * This is the prompt that shows if the user inputs an incorrect value.
+    * User stories: 3, 7, 11.
 
 ![This is an screenshot of the exit option screen](docs/features/invalid_input_error_message.png)
 
@@ -206,7 +248,7 @@ The following flowchart sumerises the structure of the password manager.
 
 
 ### Testing user stories
-1. I want to have a clear flow to the site.
+1. I want to the password manager to flow and be easy to follow.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
@@ -289,7 +331,7 @@ The following flowchart sumerises the structure of the password manager.
 <img src="">
 </details>
 
-9. I want users to to easily navigate the site.
+9. I want users to easily navigate the site.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
