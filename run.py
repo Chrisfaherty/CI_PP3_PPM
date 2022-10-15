@@ -83,7 +83,7 @@ def login() -> str:
     """
     This function allows you to login to the account.
     """
-    print(Fore.MAGENTA + "To login input your master details below: \n")
+    print(Fore.CYAN + "To login input your master details below: \n")
     login_username = input(' Input your username: \n ').lower()
     login_password = input(' Input your password: \n ')
     settings_worksheet = SHEET.worksheet('settings')
@@ -179,18 +179,17 @@ def main():
             check_for_account = check_for_master_account()
             while True:
                 if check_for_account is None:
-                    print(Fore.MAGENTA + " Create a username below:")
+                    print(Fore.CYAN + " Create a username below:")
                     master_account_username = input(" Username: \n").lower()
-                    print(Fore.MAGENTA + " Storing username ...\n")
-                    print(Fore.MAGENTA + " Create a password below: \n")
-                    print(Fore.MAGENTA + " Must be 8 characters or more: \n")
-                    print(Fore.MAGENTA + " Must contain one of each: \n")
-                    print(Fore.MAGENTA + " Lowercase, Uppercase")
-                    print(Fore.MAGENTA + " Number & special '@$_' \n")
-                    master_account_password = input(" Password: \n")
+                    print(Fore.CYAN + " Create a password below: \n")
+                    print(Fore.WHITE + " Must be 8 characters or more:")
+                    print(Fore.WHITE + " Must contain one of each:")
+                    print(Fore.WHITE + " Lowercase, Uppercase")
+                    print(Fore.WHITE + " Number & special '@$_' \n")
+                    master_account_password =\
+                        input(Fore.CYAN + " Password: \n")
                     password_to_validate = master_account_password
                     if validate_password(password_to_validate):
-                        print(Fore.MAGENTA + " Storing password...\n")
                         print(Fore.GREEN + " Password Stored \n")
                         print(Fore.WHITE + 'Remember the details to login \n')
                         print(Fore.WHITE + "Only 1 account can be stored: \n")
@@ -225,7 +224,7 @@ def main():
             """Function used to return to the option input"""
             print(Fore.MAGENTA + " Type 1: View, 2: Add, 3: Edit,")
             print(Fore.MAGENTA + "4: Edit master pwd, 5: Exit \n")
-            option = input(' Type 1, 2, 3, 4 or 5: \n ')
+            option = input(Fore.CYAN + ' Type 1, 2, 3, 4 or 5: \n ')
             if option == "1":
                 print(Fore.YELLOW + " Viewing your passwords \n")
                 all_passwords = view_passwords()
