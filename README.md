@@ -41,21 +41,19 @@ With the pace of everything going digital and everyone having different accounts
 11. [Acknowledgements](#acknowledgements)
 
 ## Project Goals
-The goal of this site is to run like a brainstorm to work on selecting items fo place in a cafe.
-There will be an ice breaker game to get the creative juices flowing.
-There will also be a list function to get your ideas down and a feedback section where you can submit the idea.
 
 ### User Goals
-* Finding an add that I can use as a shopping list,
-* Having a fun game on the app as well,
-* Having a way to give feedback and sugestions,
-* Having a minimalist design where it is only nessessary information available.
+* Storing my passwords and connecting them to a username and website,
+* View all my passwords in the terminal,
+* Add new passwords as required,
+* Find and edit a specific password,
+* Edit the master accounts password.
 
 
 ### Site Owner Goals
-* Provide a way for users to add remove and mark items in a shopping list,
-* Provide a fun interactive game that the user can play,
-* provide a method to give product feedback for future itterations.
+* Create a password managar that I would use myself,
+* Create an easy flow for the user to navigate the terminal,
+* Provide feedback when the user inputs incorrect information.
 
 
 ## User Experience
