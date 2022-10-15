@@ -112,7 +112,6 @@ The following flowchart sumerises the structure of the password manager.
 ### Languages
 * [Python](https://www.python.org/) The language used for the logic of the project.
 
-
 ### Framework and Tools
 * [Git](https://git-scm.com/) Used for version control to push the code to GitHub.
 * [GitHub](https://github.com/) Used as a repository to store the projects code.
@@ -120,6 +119,17 @@ The following flowchart sumerises the structure of the password manager.
 * [Google Cloud Platform](https://cloud.google.com/cloud-console/) Used to manage access and permissions Google auth & sheets to google services.
 * [Google Sheets](https://www.google.co.uk/sheets/about/) Used to store the passwords.
 * [Heroku Platform](https://www.heroku.com) Used to deploy the project.
+
+### Libraries
+
+#### Python Libraries
+* Time - Used to delay the user input after the welcome message is displayed.
+
+#### Third Party Libraries
+* [colorama](https://pypi.org/project/colorama/) Used add colow to the Welcome message. It was also used to help the user notice if something was sucessful with green and an error with red.
+* [gspread](https://docs.gspread.org/) Used gspread to add and manipulate data in my Google spreadsheet and to interact with Google APIs.
+* [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) Used to set up the authentification needed to access the Google API and connect my Service Account with the Credentials function. A creds.json file was created with all details the API needs to access the google account.
+
 
 ## Features
 
