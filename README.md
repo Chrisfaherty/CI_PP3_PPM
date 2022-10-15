@@ -137,31 +137,34 @@ The following flowchart sumerises the structure of the password manager.
 
 ### Existing Features
 
-* N
+* Welcome Screen
 
-![This is an screenshot of the navigation bar]()
+![This is an screenshot of the Welcome Screen](docs/ppm_welcome_screen.png)
 
-* T
+* Main Screen
 
-![This is an screenshot of the info page]()
+![This is an screenshot of the main screen](docs/features/main_screen.png)
 
-* T
+* Create Account Screen & Google Sheet
 
-![This is an screenshot of the info page]()
+![This is an screenshot of the create account screen](docs/features/create_account_screen.png)
 
-* T
+![This is an screenshot of the settings google sheet](docs/features/settings_google_sheet.png)
 
-![This is an screenshot of the footer section]()
+* Login Function Screen
 
-* I
+![This is an screenshot of the login in screen](docs/features/login_screen.png)
 
-![This is an screenshot of the List page]()
+* Adding a website screen, Option 2:
 
-* S
+![This is an screenshot of option 2](docs/features/adding_new_website_screen.png)
+![This is an screenshot of the google sheet](docs/features/password_manager_google_sheet.png)
 
-![This is an screenshot of the form page]()
+* Viewing passwords screen, Option 1:
 
- * F
+![This is an screenshot of the form page](docs/features/view_passwords_screen.png)
+
+ * Editing passwords screen, Option 3:
 
 ![This is an screenshot of the form page]()
 

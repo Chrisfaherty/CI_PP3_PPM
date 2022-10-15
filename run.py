@@ -270,11 +270,13 @@ def main():
             elif option == "3":
                 print(Fore.YELLOW + " Editing a password: \n")
                 edit_passwords()
+                print(Fore.GREEN + " Password Updated \n")
                 options()
 
             elif option == "4":
                 print(Fore.YELLOW + " Editing master password: \n")
                 edit_master_password()
+                print(Fore.GREEN + " Password Updated \n")
                 options()
 
             elif option == "5":
