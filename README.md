@@ -123,12 +123,14 @@ The following flowchart sumerises the structure of the password manager.
 ### Libraries
 
 #### Python Libraries
-* Time - Used to delay the user input after the welcome message is displayed.
+* [Time](https://docs.python.org/3/library/time.html) - Used to delay the user input after the welcome message is displayed.
+* [PrettyPrinter](https://docs.python.org/3/library/pprint.html) - Used pprint to display the passwords in a organised format for option 1.
 
 #### Third Party Libraries
 * [colorama](https://pypi.org/project/colorama/) Used add colow to the Welcome message. It was also used to help the user notice if something was sucessful with green and an error with red.
 * [gspread](https://docs.gspread.org/) Used gspread to add and manipulate data in my Google spreadsheet and to interact with Google APIs.
 * [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) Used to set up the authentification needed to access the Google API and connect my Service Account with the Credentials function. A creds.json file was created with all details the API needs to access the google account.
+* 
 
 
 ## Features
@@ -305,8 +307,12 @@ The following flowchart sumerises the structure of the password manager.
 ## Bugs
 
 ### fixed Bugs
-* I
-    * T
+* When edinting the master password if you intered the user name instead of the name it would print the new password in the incorrect cell.
+    * Change the function to focus on the one cell as this cell will not change.
+* When locating the specific row and column for edit password the function would break if the coordinates where past row 9.
+    * An if else statement was added so the formula changes once the cell is past row 9.
+* When adding websites you could add the same one a few times but then to change the password it would change the first one it found.
+    * A function was created to search for that website before adding a new one to the spread sheet. If there was one in the sheet already it would give a prompt to change the name so it is different to what is currently stored.
 
 ## Deployment
 
