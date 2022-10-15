@@ -62,8 +62,10 @@ def setup() -> str:
     """
     print(Fore.MAGENTA + " Create an account if you have\
  not yet created one.\n")
-    print(Fore.MAGENTA + " If you have an account please log in.\n")
-    print(Fore.MAGENTA + " To continue type: ")
+    print(Fore.MAGENTA + " Step 1: Create an account.")
+    print(Fore.MAGENTA + " Step 2: Login.")
+    print(Fore.MAGENTA + " You only need to create an account once \n")
+    print(Fore.CYAN + " To continue type: ")
     answer = input(" 'Create account' or 'Login': \n ").lower()
     return answer
 
