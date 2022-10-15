@@ -83,7 +83,7 @@ def login() -> str:
     """
     This function allows you to login to the account.
     """
-    print(Fore.CYAN + "To login input your master details below: \n")
+    print(Fore.CYAN + " To login input your master details below: \n")
     login_username = input(' Input your username: \n ').lower()
     login_password = input(' Input your password: \n ')
     settings_worksheet = SHEET.worksheet('settings')
@@ -106,7 +106,7 @@ def add_passwords() -> str:
     """
     Add new websites to the google sheet
     """
-    new_website = input(Fore.MAGENTA + " Input the website: \n ").lower()
+    new_website = input(Fore.CYAN + " Input the website: \n ").lower()
     password_manager_worksheet = SHEET.worksheet('password_manager')
     current_stored_website = password_manager_worksheet.find(
         new_website)
@@ -224,6 +224,7 @@ def main():
             """Function used to return to the option input"""
             print(Fore.MAGENTA + " Type 1: View, 2: Add, 3: Edit,")
             print(Fore.MAGENTA + "4: Edit master pwd, 5: Exit \n")
+            print(Fore.MAGENTA + "First store a password in option: 2. \n")
             option = input(Fore.CYAN + ' Type 1, 2, 3, 4 or 5: \n ')
             if option == "1":
                 print(Fore.YELLOW + " Viewing your passwords \n")
@@ -247,15 +248,12 @@ def main():
                         store a new website, username & password
                         into the database.
                         """
-                        print(Fore.MAGENTA + " Storing website...  \n")
-                        new_username = input(" Input username: \n ")
-                        print(Fore.MAGENTA + " Storing username... \n")
+                        new_username = input(Fore.CYAN + " Input username: \n ")
 
                         while True:
                             new_password = input(" Input password: \n ")
                             password_to_validate = new_password
                             if validate_password(password_to_validate):
-                                print(Fore.MAGENTA + " Storing password... \n")
                                 break
                         return new_website, new_username, new_password
 
