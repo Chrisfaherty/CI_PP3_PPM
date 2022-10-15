@@ -78,7 +78,7 @@ With the pace of everything going digital and everyone having different accounts
 3. I want to have clear options displayed when dicisions are to be made.
 4. I want to be able to view all my passwords in an organised form.
 5. I want to be able to easly add new passwords.
-6. I want tobe able to edit my master password or user passwords if required.
+6. I want to be able to edit my master password or user passwords if required.
 7. I want to be able to get feedback if i enter something incorrectly. 
 
 #### Site Owner
@@ -211,158 +211,98 @@ The
 
 
 <details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_3_a.png">
-<img src="docs/readme.md/user_stories/user_story_3_b.png">
+<img src="">
 </details>
 
-4. As a first time user, I want to know how to access and play the game.
+4. I want to be able to view all my passwords in an organised form.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| Game | Click on the let's go button  | reveals the game | Works as expected |
+| G | C  | r | W |
 
 <details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_4.png">
+<img src="">
 </details>
 
-5. As a first time user, I want to be able to reset the game to play again.
+5. I want to be able to easly add new passwords.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| Game | Click on the let's go button  | reveals the game | Works as expected |
-| Game | Click on the reset button | Resets score and images back to default | Works as expected |
+| G | C  | r | W |
+
 
 <details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_4.png">
-<img src="docs/readme.md/user_stories/user_story_5.png">
+<img src="">
 </details>
 
-6. As a first time user, I want to have a fequently asked questions section.
+6. I want to be able to edit my master password or user passwords if required.
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| Feedback | Click on the question mark icon in the footer | Opens the faq page | Works as expected |
+| F | C | O | W |
 
 <details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_6.png">
+<img src="">
 </details>
 
-7. As a returning user, I want to be able to quickly add items again and check them of during the day. 
-
-| **Feature** | **Action** | **Expected Results** | **Actual Result** |
-|-------------|------------|----------------------|-------------------|
-| Shopping list | Click on list in the nav bar | Locating the shopping list page | Works as expected |
-| Shopping list | Click on the + symbol on the list section | Creating a new line item | Works as expected |
-| Shopping list | Click on the check mark to mark the line item | fades out line item | works as expected |
-
-<details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_2.png">
-<img src="docs/readme.md/user_stories/user_story_2_a.png">
-<img src="docs/readme.md/user_stories/user_story_7.png">
-</details>
-
-8. As a returning user, I want to be able to access the developers links.
+7. I want to be able to get feedback if i enter something incorrectly.  
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| Footer | Scroll down to the footer section and select the github link | opens up the github depo | Works as expected|
+| S | C | L | W |
+
 
 <details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_8.png">
+<img src="">
 </details>
 
-9. As a returning user, I want to have a target score to beat the game,
+8. I want users to enjoy the experiance to make their personal password manager.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| Info | on the info section it says what the target score is | Locating the target score | Works as expected|
+| F | S | o | W|
 
 <details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_1.png">
+<img src="">
 </details>
 
-10. As a returning user , I want to be able to submit feedback.
+9. I want users to to easily navigate the site.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| Feedback | Click on the evnalope icon in the footer | Opens the feedback page | Works as expected |
-| Feedback | Fill out the form and click send off | Sends a response email to the users inbox| Works as expected |
+| I | o | L | W|
 
 <details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_3_a.png">
-<img src="docs/readme.md/user_stories/user_story_3_b.png">
+<img src="">
 </details>
 
-11. As the site owner, I want users to keep up to date with site updates,
+10. I want users to be able to use the functions with out an issue.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| Github | Select the github icon opens up the github in a new Page | Locating the github repo with all the most recent updates | Works as expected|
+| F | C | O | W |
 
 <details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_8.png">
+<img src="">
 </details>
 
-12. As the site owner, I want users to be able to submit feedback.
+11. I want users to know if there was an issue and how to resolve it.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| Feedback | Click on the evnalope icon in the footer | Opens the feedback page | Works as expected |
-| Feedback | Fill out the form and click send off | Sends a response email to the users inbox| Works as expected |
+| G | S | L | W|
 
 <details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_3_a.png">
-<img src="docs/readme.md/user_stories/user_story_3_b.png">
+<img src="">
 </details>
 
-13. As the site owner, I want users to be able to complete the tasks they require.
-
-| **Feature** | **Action** | **Expected Results** | **Actual Result** |
-|-------------|------------|----------------------|-------------------|
-| Shopping list | Click on list in the nav bar | Locating the shopping list page | Works as expected |
-| Shopping list | Click on the + symbol on the list section | Creating a new line item | Works as expected |
-| Shopping list | Click on the check mark or minus to mark or delete the line item | fades out or deletes line item | works as expected |
-
-<details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_2.png">
-<img src="docs/readme.md/user_stories/user_story_2_a.png">
-<img src="docs/readme.md/user_stories/user_story_2_b.png">
-</details>
-
-14. As the site owner, I want users to be able to return if this access a invalid link.
-
-| **Feature** | **Action** | **Expected Results** | **Actual Result** |
-|-------------|------------|----------------------|-------------------|
-| 404 | on the 404 page click on the here link, or use any of the nav buttons | brings you back to the site | Works as expected|
-
-<details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_14.png">
-</details>
 
 ## Bugs
 
 ### fixed Bugs
-* If there was an invalid url entered there was no 404 page available.
-    * This was fixed by creating a custom 404 page for the site.
-* When submitting the form there was no indication if it was submittind or in progress.
-    * Adding a alert to notify the user and a sending element to the button to notify the used action was being taken.
-* The emailJS component of the form was failing to sent a reply to the inputed email. 
-    * The code was taken back to the bairminimum required to complete the task.
-* The game was difficult to understand what is to be done to play the game.
-    * Additional instructions were added to the info screen and a FAQ's section was generated.
-* The list section was tough for the user to under stand its purpose.
-    * Additional instructions were added to the list screen and a FAQ's section was generated.
+* I
+    * T
 
 ## Deployment
-
-### GitHub pages
-* SCC Site was deployed to GitHub page,
-* All commits and repositry info can be found on Git Hub,
-* The process to deploy a site to GitHub pages is as follows:
-    * Navigate to the settings tab at the top of the page in the navigation bar,
-    * Select pages on the left hand side of the settings nav bar,
-    * Once in pages the dropdown menu under branch select Main,
-    * Then click save and your URL will be generated shortly,
-    * Inorder to keep your deployed site up to date make sure to push your commits to GitHub.
 
 ### Forking the GitHub Repository
 * Go to the GitHub repository,
@@ -370,20 +310,7 @@ The
 * This will fork the repositry.
 
 ## Credits
-* Insperation was taken from dev eds with certain aspects of code. It is also commented in the code.
-* W3Schools was also used for specific parts of the code.
-* Stackoverflow.com was used to help troublt shoot issues that occured.
-* The DEV ED coding course was used for insperation on the list section,
-* The insperation for the matching game was from DEV ED and the sample code institute rock paper scissors project,
-* The form js was sorced from the Emailjs website as their stock code.
-
-
-### Media
-* Site icons in in the footer and the game buttons were taken from Fontawesome,
-* The images for the items were taken from font awesome,
-* The background image was sourced from freepak,
-* The favicon was generated from favicon.com.
-
+* I
 
 ## Acknowledgements
 I would like to take the opertunity to thank:
