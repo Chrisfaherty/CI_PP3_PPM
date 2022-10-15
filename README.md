@@ -87,10 +87,25 @@ With the pace of everything going digital and everyone having different accounts
 10. I want users to be able to use the functions with out an issue,
 11. I want users to know if there was an issue and how to resolve it.
 
-## Design
+## Technical Design
 
-### Design Choices
+### Flowchart
 
+The following flowchart sumerises the structure of the password manager.
+<details><summary>Overview</summary>
+<img src="docs/features/ppm_flow_main.png">
+</details>
+
+<details><summary>Options</summary>
+<img src="docs/features/ppm_flow_option_1.png">
+<img src="docs/features/ppm_flow_option_2.png">
+<img src="docs/features/ppm_flow_option_3.png">
+<img src="docs/features/ppm_flow_option_4.png">
+</details>
+
+<details><summary>Exit Loop</summary>
+<img src="docs/features/ppm_flow_option_5.png">
+</details>
 
 ### Colour
 
