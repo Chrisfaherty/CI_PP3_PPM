@@ -118,7 +118,6 @@ def update_password_manager_worksheet(new_data):
     Update password_manager worksheet
     with the master data
     """
-    print(Fore.MAGENTA + " Updating password_manager worksheet ...\n")
     password_manager_worksheet = SHEET.worksheet('password_manager')
     password_manager_worksheet.append_row(new_data)
     print(Fore.GREEN + " password manager updated sucessfully.\n")
@@ -128,7 +127,8 @@ def edit_passwords() -> str:
     """
     Edit the passwords in the google sheet
     """
-    find_account = input(" Account's password to edit: \n ").lower()
+    find_account = \
+        input(Fore.CYAN + " Website's password to edit: \n ").lower()
     password_manager_worksheet = SHEET.worksheet('password_manager')
     cell_of_account = str(
         password_manager_worksheet.find(find_account))
@@ -151,7 +151,7 @@ def edit_master_password() -> str:
     """
     Edit the master password in the google sheet
     """
-    find_account = input(Fore.MAGENTA + " Enter your name: \n ").lower()
+    find_account = input(Fore.CYAN + " Enter your name: \n ").lower()
     settings_worksheet = SHEET.worksheet('settings')
     cell_of_account = str(settings_worksheet.acell('A2').value)
     if find_account in cell_of_account:
@@ -223,8 +223,8 @@ def main():
         def options() -> str:
             """Function used to return to the option input"""
             print(Fore.MAGENTA + " Type 1: View, 2: Add, 3: Edit,")
-            print(Fore.MAGENTA + "4: Edit master pwd, 5: Exit \n")
-            print(Fore.MAGENTA + "First store a password in option: 2. \n")
+            print(Fore.MAGENTA + " 4: Edit master pwd, 5: Exit \n")
+            print(Fore.MAGENTA + " First store a password in option: 2. \n")
             option = input(Fore.CYAN + ' Type 1, 2, 3, 4 or 5: \n ')
             if option == "1":
                 print(Fore.YELLOW + " Viewing your passwords \n")
@@ -233,7 +233,7 @@ def main():
                 options()
 
             elif option == "2":
-                print(Fore.YELLOW + " Adding a new password \n")
+                print(Fore.YELLOW + " Adding a new Website \n")
                 new_website, current_stored_website = add_passwords()
                 if str(new_website) in str(current_stored_website):
                     print(Fore.RED + f" {new_website} already exists. \n")
@@ -248,9 +248,14 @@ def main():
                         store a new website, username & password
                         into the database.
                         """
-                        new_username = input(Fore.CYAN + " Input username: \n ")
+                        new_username = input(Fore.CYAN + " Input username: \n")
 
                         while True:
+                            print(Fore.WHITE + " Password requirements:")
+                            print(Fore.WHITE + " Must be 8 characters + :")
+                            print(Fore.WHITE + " Must contain one of each:")
+                            print(Fore.WHITE + " Lowercase, Uppercase")
+                            print(Fore.WHITE + " Number & special '@$_' \n")
                             new_password = input(" Input password: \n ")
                             password_to_validate = new_password
                             if validate_password(password_to_validate):
