@@ -336,9 +336,13 @@ The following flowchart sumerises the structure of the password manager.
 * This will fork the repositry.
 
 ## Credits
-* I
+* The Code Institute Love running project for the guidance with connecting the terminal to a googal sheet through gspread.
+* [Tech with Tim](https://www.youtube.com/watch?v=DLn3jOsNRVE) For the inspiration to create a password manager.
+* [Tech with Tim](https://www.youtube.com/watch?v=u51Zjlnui4Y) For the guidance on how to use colorama.
+* [Geeks for geeks](geeksforgeeks.org) For the guidance on validating & checking that a strong password is created.
 
 ## Acknowledgements
 I would like to take the opertunity to thank:
 * My Mentor Mo Shami for the great feedback productive meetings and guiding me to finishing this project.
 * I would also like to thank the Code institute team for all the support and material to assist with this project.
+* The code institute Tutors for being available when ever guidance was required.
