@@ -107,38 +107,19 @@ The following flowchart sumerises the structure of the password manager.
 <img src="docs/features/ppm_flow_option_5.png">
 </details>
 
-### Colour
-
-<img src="">
-
-### Structure
-The
-* The 
-
-
-### Wireframes
-
-<details><summary></summary>
-<img src="">
-<img src="">
-<img src="">
-<img src="">
-</details>
-
-
 ## Technologies Used
 
 ### Languages
-* Python
+* [Python](https://www.python.org/) The language used for the logic of the project.
 
 
 ### Framework and Tools
-* Git
-* GitHub
-* lucidchart.com
-* Google Cloud Platform
-* Google Sheets
-* Heroku Platform
+* [Git](https://git-scm.com/) Used for version control to push the code to GitHub.
+* [GitHub](https://github.com/) Used as a repository to store the projects code.
+* [lucidchart](https://www.lucidchart.com/) Used to create the project flow.
+* [Google Cloud Platform](https://cloud.google.com/cloud-console/) Used to manage access and permissions Google auth & sheets to google services.
+* [Google Sheets](https://www.google.co.uk/sheets/about/) Used to store the passwords.
+* [Heroku Platform](https://www.heroku.com) Used to deploy the project.
 
 ## Features
 
