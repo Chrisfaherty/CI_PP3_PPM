@@ -59,40 +59,33 @@ With the pace of everything going digital and everyone having different accounts
 ## User Experience
 
 ### Target Audience
-* People that make lists,
-* People looking to track tasks or items,
-* People looking for a fun matching game.
+* People that find it hard to remember a lot of passwords,
+* People with a lot of online accounts,
+* People looking to improve their online security.
 
 ### User Requirements and Expectations
-* A intuative navigation bar,
-* All relevent information can be found with out an issue,
-* All buttons can be pressed easily and are large enough on all screen sizes,
-* Straight forward way to add check and remove items from the list,
-* A site that is Accessability focused,
-* A clear method to submit feedback,
-* A fun game to pass time.
+* A welcome screen with a short description of what the site is,
+* A easy to follow flow of information,
+* Feedback if the incorrect value in input,
+* Passwords to be presented in an easy to read format,
+* Color codeing to help guide the User,
 
 ### User Stories
 
 #### First-time  User
-1. As a first time user, I want to be able to intuatively tell how I use the app.
-2. As a first time user, I want to be able to add remove and check list items.
-3. As a first time user, I want to know how to submit feedback.
-4. As a first time user, I want to know how to access and play the game.
-5. As a first time user, I want to be able to reset the game to play again.
-6. As a first time user, I want to have a fequently asked questions section.
-
-#### Returning User
-7. As a returning user, I want to be able to quickly add items again and check them of during the day. 
-8. As a returning user, I want to be able to access the developers links.
-9. As a returning user, I want to have a target score to beat the game,
-10. As a returning user , I want to be able to submit feedback.
+1. I want to have a clear flow to the site,
+2. I want to be able to create a master username and password to protect my passwords.
+3. I want to have clear options displayed when dicisions are to be made.
+4. I want to be able to view all my passwords in an organised form.
+5. I want to be able to easly add new passwords.
+6. I want tobe able to edit my master password or user passwords if required.
+7. I want to be able to get feedback if i enter something incorrectly. 
 
 #### Site Owner
-11. As the site owner, I want users to keep up to date site updates,
-12. As the site owner, I want users to be able to submit feedback.
-13. As the site owner, I want users to be able to complete the tasks they require.
-14. As the site owner, I want users to be able to return if this access a invalid link.
+8. I want users to enjoy the experiance to make their personal password manager,
+9. I want users to to easily navigate the site,
+10. I want users to be able to use the functions with out an issue,
+11. I want users to know if there was an issue and how to resolve it.
 
 ## Design
 
