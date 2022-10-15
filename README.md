@@ -90,251 +90,125 @@ With the pace of everything going digital and everyone having different accounts
 ## Design
 
 ### Design Choices
-The site was designed to have a minimal look and highlight all the relevent components. The site was designed in a way to feel relaxing.
+
 
 ### Colour
-The colour scheme used in this project is a white backgound with black text. This went alogn with a ocean color scheme.
-<img src="docs/readme.md/features/color_scheme.png">
 
-### Fonts
-The fonts that were chosen were Lato for the logo and Abril Fatface for the content. Both of these fonts had a fall back of sans-serif.
+<img src="">
 
 ### Structure
-The home page is structured is an intuative way where all the relevent information is presented at the correct time,
-* The first screen is the info screen that lets you enter the game, With only one button you can't go wrong,
-* The game is then intuative to play with text feedback and images changing depending on the button you press,
-* In the nav bar you can access the list page if you want to create a list of items and tick them off as you go,
-* In the footer you can find the email icon that brings you to a feedback form.
+The
+* The 
+
 
 ### Wireframes
 
-<details><summary>Game</summary>
-<img src="docs/readme.md/wireframe/game_desktop_wireframe.png">
-<img src="docs/readme.md/wireframe/game_ipad_wireframe.png">
-<img src="docs/readme.md/wireframe/game_iphone_wireframe.png">
+<details><summary></summary>
+<img src="">
+<img src="">
+<img src="">
+<img src="">
 </details>
-<details><summary>List</summary>
-<img src="docs/readme.md/wireframe/list_desktop_wireframe.png">
-<img src="docs/readme.md/wireframe/list_ipad_wireframe.png">
-<img src="docs/readme.md/wireframe/list_iphone_wireframe.png">
-</details>
-<details><summary>Form</summary>
-<img src="docs/readme.md/wireframe/form_desktop_wireframe.png">
-<img src="docs/readme.md/wireframe/form_ipad_wireframe.png">
-<img src="docs/readme.md/wireframe/form_iphone_wireframe.png">
-</details>
+
 
 ## Technologies Used
 
 ### Languages
-* HTML
-* CSS
-* JavaScript
+* Python
+
 
 ### Framework and Tools
 * Git
 * GitHub
-* Gitpod
-* Favicon.io
-* Font Awosome
-* Google Fonts
-* Balsamiq
-* EmailJS
+* lucidchart.com
+* Google Cloud Platform
+* Google Sheets
+* Heroku Platform
 
 ## Features
 
 
 ### Existing Features
 
-* Navigation Bar
-    * The navigation bar is situated at the top of the page,
-    * The navigation links to the game page & list are all positioned to the right hand side of the header,
-    * The black text in the navigation bar links contrasts nicely with the white background and main hero image below,
-    * This Navigation bar is clear to tell the website you are on and intuative to use navigation between each page.
-    * User stories covered: 2, 7, 13
+* N
 
-![This is an screenshot of the navigation bar](docs/readme.md/features/header_nav.png)
+![This is an screenshot of the navigation bar]()
 
-* The Info Screen
-    * The info screen is used to give the basic game rules,
-    * This screen has the access button to get into the game,
-    * This screen will fade away once lets go is clocked to reveal the game.
-    * User stories covered: 1, 4, 9
+* T
 
-![This is an screenshot of the info page](docs/readme.md/features/info_screen.png)
+![This is an screenshot of the info page]()
 
-* The Game Screen
-    * This is where you play the main game. There is a few options for the user to interact with the choice buttons and the reset button,
-    * There is feedback when a button is clicked. The computer selects a image at the same time the user selects an image,
-    * When the choice button is selected the outcome text will say if it is a match or not,
-    * If it is a match it will update the score number, and the same if it is not a match,
-    * If you use all 10 chances and don't get 5 matches it will say you lost the game.
-    * User stories covered: 5
+* T
 
-![This is an screenshot of the info page](docs/readme.md/features/match_game.png)
+![This is an screenshot of the info page]()
 
-* The Footer 
-    * The footer section keeps the links static at the bottom of the page,
-    * The github, linkedin, feedback & faq links open up a new webpage when they are clicked on,
-    * The icons were sourced and imported from font awosome,
-    * To make the footer responsive for both mobile and desktop screens. It will stay th the bottom of your screen on mobile so you always  have access to the links,
-    * User stories covered: 3, 8, 11
+* T
 
-![This is an screenshot of the footer section](docs/readme.md/features/footer.png)
+![This is an screenshot of the footer section]()
 
-* Items list Page
-    * This page is minimalist styled. 
-    * The input in the center of the page lets you enter text and click the + to add the list below,
-    * Once the user adds a few line items you can clock the check mark to fade them out to be considered done,
-    * The user can also use the x to delete the line item off the page.
-    * User stories covered: 2, 7, 13
+* I
 
-![This is an screenshot of the List page](docs/readme.md/features/shopping_list.png)
+![This is an screenshot of the List page]()
 
-* Submission form Page
-    * The subscription form gathers the users data and they can input feedback on the product,
-    * The styling alines with the home page where there is a background image and color scheme,
-    * The form requires the name, email and a message to be entered.
-    * The form will send a response back to your email so you know we recieved it.
-    * User stories covered: 3, 10, 12
+* S
 
-![This is an screenshot of the form page](docs/readme.md/features/form.png)
+![This is an screenshot of the form page]()
 
- * FAQ Page
-    * The faq page goes over the most asked questions.
-    * This page will be updated with feadback recieved from the user.
-    * User stories covered: 6, 9
+ * F
 
-![This is an screenshot of the form page](docs/readme.md/features/faq.png)
+![This is an screenshot of the form page]()
 
- * 404 Page
-    * The 404 page has all links to return it back to the where the user meant to go.
-    * User stories covered: 14
+ * 4
 
-![This is an screenshot of the form page](docs/readme.md/features/404.png)
+![This is an screenshot of the form page]()
 
 
 ### Features Left to Implement
-* A feature that I would like to implement in the future is to add till page that could be set up when the cafe items are selected and it can calculate the cost of each order,
+* A feature that I would like to implement in the future 
 
 ## Testing
 
-* The site works on the following browsers
-    * Google Chrome.
-    * Safari.
-    * Firefox.
-* The three webpages were tested to be responsive as a desktop, tablet and mobile screensize,
-* All images and text was reviewed and confirmed to be readable,
-* The inputs and buttons work,
-* The the form returns an email to the users inbox.
+* T
 
 
 
 ### Validator Testing
-* HTML
+* PEP8
     * No errors were found when passing the site pages through the [official W3C validator](https://validator.w3.org/)
 
-    <details><summary>Game</summary>
-    <img src="docs/readme.md/testing/index.html_html_checker.png">
-    </details>
-    <details><summary>List</summary>
-    <img src="docs/readme.md/testing/list.html_html_checker.png">
-    </details>
-    <details><summary>Form</summary>
-    <img src="docs/readme.md/testing/form.html_html_checker.png">
-    </details>
-    <details><summary>404</summary>
-    <img src="docs/readme.md/testing/404.html_html_checker.png">
-    </details>
-    <details><summary>Faq</summary>
-    <img src="docs/readme.md/testing/faq.html_html_checker.png">
+    <details><summary>Password Manager</summary>
+    <img src="">
     </details>
 
-* CSS
-    * No errors were found when passing the site pages through the [official (Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
-    <details><summary>Image</summary>
-    <img src="docs/readme.md/testing/scc_css_checker.png">
-    </details>
-
-* Accessibility
-    *  No errors were found when passing the site pages through the [official accessability](https://wave.webaim.org/)
-    <details><summary>Game</summary>
-    <img src="docs/readme.md/testing/wave_index.png">
-    </details>
-    <details><summary>List</summary>
-    <img src="docs/readme.md/testing/wave_list.png">
-    </details>
-    <details><summary>Form</summary>
-    <img src="docs/readme.md/testing/wave_form.png">
-    </details>
-    <details><summary>404</summary>
-    <img src="docs/readme.md/testing/wave_404.png">
-    </details>
-    <details><summary>Faq</summary>
-    <img src="docs/readme.md/testing/wave_faq.png">
-    </details>
-
-* Performance
-    * The performance was tested in lighthouse on the chrome browser on all pages.
-    <details><summary>Game</summary>
-    <img src="docs/readme.md/testing/index.html_lighthouse_checker.png">
-    </details>
-    <details><summary>List</summary>
-    <img src="docs/readme.md/testing/list.html_lighthouse_checker.png">
-    </details>
-    <details><summary>Form</summary>
-    <img src="docs/readme.md/testing/form.html_lighthouse_checker.png">
-    </details>
-    <details><summary>404</summary>
-    <img src="docs/readme.md/testing/404.html_lighthouse_checker.png">
-    </details>
-    <details><summary>Faq</summary>
-    <img src="docs/readme.md/testing/faq.html_lighthouse_checker.png">
-    </details>
-
-* Java Script
-    * No errors were found when passing the site pages through the [official (JShint) validator](https://jshint.com/)
-    <details><summary>Game</summary>
-    <img src="docs/readme.md/testing/game.js_js_checker.png">
-    </details>
-    <details><summary>List</summary>
-    <img src="docs/readme.md/testing/list.js_js_checker.png">
-    </details>
-    <details><summary>Form</summary>
-    <img src="docs/readme.md/testing/form.js_js_checker.png">
-    </details>
 
 ### Testing user stories
-1. As a first time user, I want to be able to intuatively tell how I use the app.
+1. I want to have a clear flow to the site.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| Info | Read the info section | Locating the rules and start button | Works as expected |
+| I | R | L | W |
 
 <details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_1.png">
+<img src="">
 </details>
 
-2. As a first time user, I want to be able to add remove and check list items.
+2. I want to be able to create a master username and password to protect my passwords.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| Shopping list | Click on list in the nav bar | Locating the shopping list page | Works as expected |
-| Shopping list | Click on the + symbol on the list section | Creating a new line item | Works as expected |
-| Shopping list | Click on the check mark or minus to mark or delete the line item | fades out or deletes line item | works as expected |
+| S | C | L | W |
 
 <details><summary>Screenshots</summary>
-<img src="docs/readme.md/user_stories/user_story_2.png">
-<img src="docs/readme.md/user_stories/user_story_2_a.png">
-<img src="docs/readme.md/user_stories/user_story_2_b.png">
+<img src="">
+
 </details>
 
-3. As a first time user, I want to know how to submit feedback.
+3. I want to have clear options displayed when dicisions are to be made.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| Feedback | Click on the evnalope icon in the footer | Opens the feedback page | Works as expected |
-| Feedback | Fill out the form and click send off | Sends a response email to the users inbox| Works as expected |
+| F| C | O | W |
+
 
 <details><summary>Screenshots</summary>
 <img src="docs/readme.md/user_stories/user_story_3_a.png">
