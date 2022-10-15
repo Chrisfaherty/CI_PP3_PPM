@@ -162,15 +162,29 @@ The following flowchart sumerises the structure of the password manager.
 
 * Viewing passwords screen, Option 1:
 
-![This is an screenshot of the form page](docs/features/view_passwords_screen.png)
+![This is an screenshot of the viewing passwords screen](docs/features/view_passwords_screen.png)
 
  * Editing passwords screen, Option 3:
 
-![This is an screenshot of the form page]()
+![This is an screenshot of the editing passwords screen](docs/features/edit_password_screen.png)
+![This is an screenshot of the updated settings sheet](docs/features/edit_password_example.png)
 
- * 4
+ * Editing master password screen, Option 4:
 
-![This is an screenshot of the form page]()
+![This is an screenshot of the edit master password screen](docs/features/edit_master_password_screen.png)
+![This is an screenshot of the updated settings excel sheet](docs/features/updated_settings_google_sheet.png)
+
+ * Exiting to the login screen, Option 5:
+
+![This is an screenshot of the exit option screen](docs/features/edit_master_password_screen.png)
+
+ * Error message for passwords:
+
+![This is an screenshot of the exit option screen](docs/features/invalid_password_error_message.png)
+
+* Error message for invalid input:
+
+![This is an screenshot of the exit option screen](docs/features/invalid_input_error_message.png)
 
 
 ### Features Left to Implement
