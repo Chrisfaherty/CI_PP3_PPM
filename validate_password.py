@@ -21,16 +21,12 @@ def validate_password(password_to_validate: str) -> bool:
     digits = "0123456789"
     if (len(s) >= 8):
         for i in s:
-            # counting lowercase alphabets
             if (i in smallalphabets):
                 low += 1
-            # counting uppercase alphabets
             if (i in capitalalphabets):
                 upp += 1
-            # counting digits
             if (i in digits):
                 dgt += 1
-            # counting the mentioned special characters
             if (i in specialchar):
                 spec += 1
         if (low >= 1 and upp >= 1 and spec >= 1 and dgt >= 1 and

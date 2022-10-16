@@ -1,5 +1,5 @@
 """
-This function is to test the main inputs run.py recieves from the user.
+This function is to test the validate_password function.
 """
 import unittest
 from validate_password import validate_password
@@ -7,7 +7,9 @@ from validate_password import validate_password
 
 class TestValidPassword(unittest.TestCase):
     """
-    This function is to test the main inputs run.py recieves from the user.
+    Testing if the passwords are valid and include the required characters.
+    At least 1 uppercase, lowercase, digit and @$_ is required.
+    The password also has to be 8 characters or longer.
     """
 
     def test_password_3(self):
@@ -30,6 +32,10 @@ class TestValidPassword(unittest.TestCase):
 
 
 class TestPasswordLength(unittest.TestCase):
+    """
+    Testing if the passwords are long enough.
+    The password has to be 8 characters or longer.
+    """
 
     def test_password_length_1(self):
         self.assertFalse(validate_password(""))
