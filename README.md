@@ -13,7 +13,7 @@ This password manager allows stores one main account. It then allows that user t
 
 With the pace of everything going digital and everyone having different accounts for everything its human nature to take the easy route and use the same password for every account. This has a huge impact on your security and shows why password managers are vital today more than ever.
 
-## Table of Content
+## Table of Contents
 
 1. [Project Goals](#project-goals)
     1. [User Goals](#user-goals)
@@ -125,11 +125,12 @@ The following flowchart sumerises the structure of the password manager.
 #### Python Libraries
 * [Time](https://docs.python.org/3/library/time.html) - Used to delay the user input after the welcome message is displayed.
 * [PrettyPrinter](https://docs.python.org/3/library/pprint.html) - Used pprint to display the passwords in a organised format for option 1.
+* [Pycodestyle](https://pypi.org/project/pycodestyle/) - Used to check Python code against some of the style conventions in PEP 8.
 
 #### Third Party Libraries
-* [colorama](https://pypi.org/project/colorama/) Used add colow to the Welcome message. It was also used to help the user notice if something was sucessful with green and an error with red.
-* [gspread](https://docs.gspread.org/) Used gspread to add and manipulate data in my Google spreadsheet and to interact with Google APIs.
-* [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) Used to set up the authentification needed to access the Google API and connect my Service Account with the Credentials function. A creds.json file was created with all details the API needs to access the google account.
+* [colorama](https://pypi.org/project/colorama/) JUSTIFICATION: Colorama was used add color to the Welcome message. It was also used to help the user notice if something was sucessful with green and an error with red.
+* [gspread](https://docs.gspread.org/) JUSTIFICATION: I used gspread to add and manipulate data in my Google spreadsheet and to interact with Google APIs. This was required to store the passwords and user details and edit them.
+* [google.oauth2.service_account](https://google-auth.readthedocs.io/en/master/) JUSTIFICATION: Used to set up the authentification needed to access the Google API and connect my Service Account with the Credentials function. A creds.json file was created with all details the API needs to access the google account.
 
 
 ## Features
@@ -228,15 +229,16 @@ The following flowchart sumerises the structure of the password manager.
 
 ![This is an screenshot of the exit option screen](docs/features/invalid_input_error_message.png)
 
+[Back to Table Of Contents](#table-of-contents)
 
-### Features Left to Implement
-* A feature that I would like to implement in the future 
+
 
 ## Testing
 
-* T
-
-
+* Testing was condicted in three ways.
+    * Testing the code with the pycodestyle extension.
+    * Testing the code manually with the user stories.
+    * Testing the code with unit testing.
 
 ### Validator Testing
 * PEP8
@@ -245,6 +247,7 @@ The following flowchart sumerises the structure of the password manager.
     <details><summary>Password Manager</summary>
     <img src="">
     </details>
+        * Note "PEP8online.com" is currently down.
 
 
 ### Testing user stories
@@ -418,6 +421,8 @@ The following flowchart sumerises the structure of the password manager.
 <img src="docs/testing/user_story_1_4.png">
 <img src="docs/testing/user_story_10_1.png">
 
+[Back to Table Of Contents](#table-of-contents)
+
 
 ## Bugs
 
@@ -461,3 +466,5 @@ I would like to take the opertunity to thank:
 * My Mentor Mo Shami for the great feedback productive meetings and guiding me to finishing this project.
 * I would also like to thank the Code institute team for all the support and material to assist with this project.
 * The code institute Tutors for being available when ever guidance was required.
+
+[Back to Table Of Contents](#table-of-contents)
