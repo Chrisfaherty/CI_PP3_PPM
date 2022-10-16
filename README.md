@@ -313,21 +313,36 @@ The following flowchart sumerises the structure of the password manager.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| G | C  | r | W |
-
+| Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
+| Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
+| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | As expected |
+| Login Function screen | Input option 2 | User is presented with the stored passwords | Works as expected |
+| Adding a website screen | Input the website, username & password | notice password stored sucessfully and details displayed | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
-</details>
+<img src="docs/testing/user_story_1_1.png">
+<img src="docs/testing/user_story_1_2.png">
+<img src="docs/testing/user_story_1_3.png">
+<img src="docs/testing/user_story_1_4.png">
+<img src="docs/testing/user_story_5_1.png">
+<img src="docs/testing/user_story_5_2.png">
 
 6. I want to be able to edit my master password or user passwords if required.
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| F | C | O | W |
+| Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
+| Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
+| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | As expected |
+| Login Function screen | Input option 4 | User is presented with the stored passwords | Works as expected |
+| Adding a website screen | Input the name & password | notice password updated displayed | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
-</details>
+<img src="docs/testing/user_story_1_1.png">
+<img src="docs/testing/user_story_1_2.png">
+<img src="docs/testing/user_story_1_3.png">
+<img src="docs/testing/user_story_1_4.png">
+<img src="docs/testing/user_story_6_1.png">
+<img src="docs/testing/user_story_6_2.png">
 
 7. I want to be able to get feedback if i enter something incorrectly.  
 
