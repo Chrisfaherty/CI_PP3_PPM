@@ -437,18 +437,56 @@ The following flowchart sumerises the structure of the password manager.
 ## Deployment
 
 ### Deploying to Heroku
+* Go to the heroku.com site.
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_1.png">
+* Click the signup button in the top right.
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_2.png">
 * Create an account on heroku.com,
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_3.png">
+* Confirm your account in the email heroku sent to your inbox,
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_4.png">
+* Create a password,
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_5.png">
+* Click and proceed,
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_6.png">
+* Accept the terms of service,
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_7.png">
 * Create a new app, create a name for your app "ci_pp3_ppm" and choose your region,
-* Click on create app,
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_8.png">
 * Go to the settings section,
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_9.png">
 * Click Reveal Config Vars,
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_10.png">
 * Input your .json file. name in the 'Key' field, copy the .json file and paste it in 'Value' field. Also add a key 'PORT' and value '8000'.
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_11.png">
 * In the build packs section click add buildpack. For this project, I added 2 buildpacks 'Python' and 'node.js'. Make sure the Python build pack is above the Nodejs buildpack.
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_12.png">
 * Go to "Deploy" in "Deployment method" select "GitHub",
-* Click 'Search' (Enter in your projects name that you have in your github repositry)and then 'Connect',
-*  Choose the branch you want to buid your app from
-* If prefered, click on "Enable Automatic Deploys", which keeps the app up to date when you push to git hub,
-* In the Manual deploy section click Deploy Branch to deploy your code. 
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_13.png">
+* Click 'Search' (Enter in your projects name that you have in your github repositry)and then 'Connect'. This project is connected to Chrisfaherty/CI_PP3_PPM.
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_14.png">
+* Choose the branch you want to buid your app from "main" .
+* If prefered, click on "Enable Automatic Deploys", which keeps the app up to date when you push to git hub. Automatic deployments is turned on for this project.
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_15.png">
+* If the project doesn't deploy after selecting automatic deploy . In the Manual deploy section click Deploy Branch to deploy your code, this is what I had to do.
+    <details><summary>Screenshots</summary>
+    <img src="docs/deployment/heroku_16.png">
+* Once the code is deployed it will show a button that you can click to view the deployed site. Then the project has sucessfully been deployed.
 
 ### Forking the GitHub Repository
 * Go to the GitHub repository,
