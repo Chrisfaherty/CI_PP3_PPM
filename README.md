@@ -333,7 +333,7 @@ The following flowchart sumerises the structure of the password manager.
 | Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
 | Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
 | Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | As expected |
-| Login Function screen | Input option 4 | User is presented with the stored passwords | Works as expected |
+| Login Function screen | Input option 3 for user password & 4 for master password | User is presented with the stored passwords | Works as expected |
 | Adding a website screen | Input the name & password | notice password updated displayed | Works as expected |
 
 <details><summary>Screenshots</summary>
@@ -348,31 +348,40 @@ The following flowchart sumerises the structure of the password manager.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| S | C | L | W |
+| Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
+| Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
+| Login Function screen | Input username & incorrct password | User is told it did not match our records and prompted to try again | Works as expected |
 
 
 <details><summary>Screenshots</summary>
-<img src="">
-</details>
+<img src="docs/testing/user_story_1_1.png">
+<img src="docs/testing/user_story_1_2.png">
+<img src="docs/testing/user_story_7_1.png">
 
 8. I want users to enjoy the experiance to make their personal password manager.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| F | S | o | W|
+| Main screen | Input your name | User is  welcomed and presented with options on how to proceed | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
+<img src="docs/testing/user_story_1_1.png">
+<img src="docs/testing/user_story_1_2.png">
 </details>
 
 9. I want users to easily navigate the site.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| I | o | L | W|
+| Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
+| Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
+| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
+<img src="docs/testing/user_story_1_1.png">
+<img src="docs/testing/user_story_1_2.png">
+<img src="docs/testing/user_story_1_3.png">
+<img src="docs/testing/user_story_1_4.png">
 </details>
 
 10. I want users to be able to use the functions with out an issue.
