@@ -14,7 +14,7 @@ class TestValidPassword(unittest.TestCase):
 
     def test_password_3(self):
         self.assertFalse(validate_password("userpass"))
-    
+
     def test_password_4(self):
         self.assertFalse(validate_password("userpass1"))
 
@@ -26,7 +26,7 @@ class TestValidPassword(unittest.TestCase):
 
     def test_password_7(self):
         self.assertTrue(validate_password("User_pass2022"))
-    
+
     def test_password_8(self):
         self.assertTrue(validate_password("User_pass@2022"))
 
@@ -42,7 +42,7 @@ class TestPasswordLength(unittest.TestCase):
 
     def test_password_length_2(self):
         self.assertFalse(validate_password("user"))
-    
+
     def test_password_length_3(self):
         self.assertFalse(validate_password("userpa"))
 
@@ -53,4 +53,3 @@ class TestPasswordLength(unittest.TestCase):
 if __name__ == '__main__':
 
     unittest.main()
-

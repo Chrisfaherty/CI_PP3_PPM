@@ -47,13 +47,9 @@ def logo():
 
 
 logo()
-# welcome message
 name = input(" Input your name: \n ").lower()
 print(Fore.MAGENTA + " Hi " + name + ", Welcome to your\
  personal password manager! \n")
-
-# This if statemant will be used for the log in screen to see if
-# they want to create an account or login to an existing account.
 
 
 def setup() -> str:
@@ -293,4 +289,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

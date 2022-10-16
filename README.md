@@ -554,6 +554,7 @@ The following flowchart sumerises the structure of the password manager.
 * [Tech with Tim](https://www.youtube.com/watch?v=DLn3jOsNRVE) For the inspiration to create a password manager.
 * [Tech with Tim](https://www.youtube.com/watch?v=u51Zjlnui4Y) For the guidance on how to use colorama.
 * [Geeks for geeks](geeksforgeeks.org) For the guidance on validating & checking that a strong password is created.
+* [Otu Michael](https://dev.to/otumianempire/custom-password-validation-in-python-unit-test-the-function-for-password-validation-4l7b) For the guidance with unit testing the password validator.
 
 ## Acknowledgements
 I would like to take the opertunity to thank:
