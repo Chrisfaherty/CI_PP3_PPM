@@ -313,7 +313,7 @@ The following flowchart sumerises the structure of the password manager.
 |-------------|------------|----------------------|-------------------|
 | Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
 | Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
-| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | As expected |
+| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user_story_1_1.png">
@@ -342,7 +342,7 @@ The following flowchart sumerises the structure of the password manager.
 |-------------|------------|----------------------|-------------------|
 | Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
 | Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
-| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | As expected |
+| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | Works as expected |
 
 <details><summary>Screenshots</summary>
 <img src="docs/testing/user_story_1_1.png">
@@ -357,7 +357,7 @@ The following flowchart sumerises the structure of the password manager.
 |-------------|------------|----------------------|-------------------|
 | Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
 | Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
-| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | As expected |
+| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | Works as expected |
 | Login Function screen | Input option 1 | User is presented with the stored passwords | Works as expected |
 
 <details><summary>Screenshots</summary>
@@ -374,7 +374,7 @@ The following flowchart sumerises the structure of the password manager.
 |-------------|------------|----------------------|-------------------|
 | Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
 | Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
-| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | As expected |
+| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | Works as expected |
 | Login Function screen | Input option 2 | User is presented with the stored passwords | Works as expected |
 | Adding a website screen | Input the website, username & password | notice password stored sucessfully and details displayed | Works as expected |
 
@@ -391,7 +391,7 @@ The following flowchart sumerises the structure of the password manager.
 |-------------|------------|----------------------|-------------------|
 | Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
 | Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
-| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | As expected |
+| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | Works as expected |
 | Login Function screen | Input option 3 for user password & 4 for master password | User is presented with the stored passwords | Works as expected |
 | Adding a website screen | Input the name & password | notice password updated displayed | Works as expected |
 
@@ -449,7 +449,7 @@ The following flowchart sumerises the structure of the password manager.
 |-------------|------------|----------------------|-------------------|
 | Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
 | Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
-| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | As expected |
+| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | Works as expected |
 | Login Function screen | Input option 2 | User is presented with the stored passwords | Works as expected |
 | Adding a website screen | Input a website already stored | Notice the website is already stored and a sugestion to avoid this error | Works as expected |
 
@@ -466,7 +466,7 @@ The following flowchart sumerises the structure of the password manager.
 |-------------|------------|----------------------|-------------------|
 | Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
 | Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
-| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | As expected |
+| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | Works as expected |
 | Login Function screen | Input option 2 | User is presented with the stored passwords | Works as expected |
 | Adding a website screen | Input a website already stored | Notice the website is already stored and a sugestion to avoid this error | Works as expected |
 
