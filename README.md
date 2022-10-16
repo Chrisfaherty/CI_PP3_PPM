@@ -9,9 +9,9 @@
 
 This is a command line verson of a password manager.
 
-This password manager allows stores one main account. It then allows that user to View add and edit their passwords.
+This password manager allows the user to store one main account. It then allows that user to view, add and edit their passwords.
 
-With the pace of everything going digital and everyone having different accounts for everything its human nature to take the easy route and use the same password for every account. This has a huge impact on your security and shows why password managers are vital today more than ever.
+With the pace of everything going digital and everyone having different accounts for everything, its human nature to take the easy route and use the same password for every account. This has a huge impact on your security and shows why password managers are vital today more than ever.
 
 ## Table of Contents
 
@@ -294,16 +294,23 @@ The following flowchart sumerises the structure of the password manager.
 * Testing was condicted in three ways.
     * Testing the code with the pycodestyle extension.
     * Testing the code manually with the user stories.
-    * Testing the code with unit testing.
+    * Testing the password validation code with unit testing.
 
 ### Validator Testing
-* PEP8
-    * No errors were found when passing the site pages through the [official W3C validator](https://validator.w3.org/)
+* pycodestyle
+    * No errors were found when passing the site pages through the [pycodestyle validator](https://pypi.org/project/pycodestyle/)
 
-    <details><summary>Password Manager</summary>
+    <details><summary>run.py</summary>
     <img src="">
     </details>
-        * Note "PEP8online.com" is currently down.
+
+    <details><summary>validate_password.py</summary>
+    <img src="">
+    </details>
+
+    <details><summary>test_validation.py</summary>
+    <img src="">
+    </details>
 
 
 ### Testing user stories
@@ -459,6 +466,7 @@ The following flowchart sumerises the structure of the password manager.
 <img src="docs/testing/user_story_1_3.png">
 <img src="docs/testing/user_story_1_4.png">
 <img src="docs/testing/user_story_10_1.png">
+</details>
 
 11. I want users to know if there was an issue and how to resolve it.
 
@@ -476,13 +484,47 @@ The following flowchart sumerises the structure of the password manager.
 <img src="docs/testing/user_story_1_3.png">
 <img src="docs/testing/user_story_1_4.png">
 <img src="docs/testing/user_story_10_1.png">
+</details>
 
 [Back to Table Of Contents](#table-of-contents)
 
+### Unit Testing
+
+#### Password validator
+
+* These unit tests were writen using the unittest library.
+* They are to check if a password is long enough and if the password is valid.
+
+##### Valid password
+
+* This unit test was writed to check if the code below is working correctly and checking if they are valid.
+* A valid password must be 8+ characters and have at least 1 of each of the following:
+    * Uppercase,
+    * Lowercase,
+    * Digit,
+    * Special character "@$_".
+* The unit test inputs in 6 different tests and they app passed.
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/test_valid_password_code.png">
+<img src="docs/testing/test_valid_password_result.png">
+</details>
+
+
+##### Password length
+
+* This unit test was writed to check if the code below is working correctly and checking the length is valid.
+* The valid length password is 8 characters or more.
+* The unit test inputs in 4 different tests and they passed. 
+
+<details><summary>Screenshots</summary>
+<img src="docs/testing/test_password_length_code.png">
+<img src="docs/testing/test_password_length_result.png">
+</details>
 
 ## Bugs
 
-### fixed Bugs
+### Fixed Bugs
 * When edinting the master password if you intered the user name instead of the name it would print the new password in the incorrect cell.
     * Change the function to focus on the one cell as this cell will not change.
 * When locating the specific row and column for edit password the function would break if the coordinates where past row 9.
