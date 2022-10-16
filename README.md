@@ -281,21 +281,32 @@ The following flowchart sumerises the structure of the password manager.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| F| C | O | W |
-
+| Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
+| Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
+| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | As expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
+<img src="docs/testing/user_story_1_1.png">
+<img src="docs/testing/user_story_1_2.png">
+<img src="docs/testing/user_story_1_3.png">
+<img src="docs/testing/user_story_1_4.png">
 </details>
 
 4. I want to be able to view all my passwords in an organised form.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
-| G | C  | r | W |
+| Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
+| Login Function screen | Input login | User is asked to input their user name and password | Works as expected |
+| Login Function screen | Input username & password | User is given 5 options to choose from along with information on what should be done first | As expected |
+| Login Function screen | Input option 1 | User is presented with the stored passwords | Works as expected |
 
 <details><summary>Screenshots</summary>
-<img src="">
+<img src="docs/testing/user_story_1_1.png">
+<img src="docs/testing/user_story_1_2.png">
+<img src="docs/testing/user_story_1_3.png">
+<img src="docs/testing/user_story_1_4.png">
+<img src="docs/testing/user_story_4_1.png">
 </details>
 
 5. I want to be able to easly add new passwords.
