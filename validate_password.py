@@ -23,16 +23,16 @@ def validate_password(password_to_validate: str) -> bool:
         for i in s:
             # counting lowercase alphabets
             if (i in smallalphabets):
-                low += 1           
+                low += 1
             # counting uppercase alphabets
             if (i in capitalalphabets):
-                upp += 1           
+                upp += 1
             # counting digits
             if (i in digits):
-                dgt += 1           
+                dgt += 1
             # counting the mentioned special characters
             if (i in specialchar):
-                spec += 1       
+                spec += 1
         if (low >= 1 and upp >= 1 and spec >= 1 and dgt >= 1 and
                 low + spec + upp + dgt == len(s)):
             print(" Valid Password \n")
