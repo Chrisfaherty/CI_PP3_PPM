@@ -70,6 +70,62 @@ With the pace of everything going digital and everyone having different accounts
 * Passwords to be presented in an easy to read format,
 * Color codeing to help guide the User,
 
+### User Manual
+<details><summary>Instructions</summary>
+
+#### Welcome
+On the welcome screen the project logo is displayed and it explains that this is a personal password manager.
+The first thing you have to do in input your name in the field and press enter.
+
+#### Main
+After entering your name you in the welcome screen you are greeted. The next step is to create your account assuming this is the first time using this password manager. 
+To create an account type "create account" into the prompt window. It is importing to have the space in between create and account.
+
+#### Create account
+The first thing you have to do is create a user name and press enter. Next you have to create a password. The program displays the password criteria. 
+The password must be longer than 8 characters, it must contain at least 1 uppercase and lowercase character, it must have at least one number and include one of the following special characters "@$_". This is to ensure you create a strong password. Once the password is created and you press enter it will let you know if the password was correct and stored. 
+It will also give a reminder that only one user is stored as it is your personal password manager so you have to remember your login details and keep them safe.
+Note: Make sure to write down your user name and password exactly or you will not be able to log into the password manager if you forget them.
+
+#### Login function
+After creating your account you are returned to the main screen. This gives you 2 options to create an account or to log in. By this point your account should be created so you can login.
+Type login into the prompt. To login you will first be asked to enter your user name that you created for your master account. Once you enter your username it will ask you to enter your password.
+Once you enter your password and press enter it will say your logged in if everything was correct and take you to the login function screen. 
+The login function screen is where you get to choose what to do next. View your passwords, add a new website, edit your passwords, edit your master password & exit to the main screen.
+If this is your first time in the password manager you should go to option 2 first and add a few websites you want to store the passwords for.
+
+#### Adding a website
+After you entered 2 into the prompt the program began the process to add a new website. The first thing you are asked to do is enter the website you want to store a password for and press enter. 
+Now type in your username for that account and press enter. Now you create a password for this account. The password criteria is displayed, once the password is created press enter. 
+If everything is ok it will display valid password and that the password manager updated sucessfully. Then you are returned to the login function screen.
+You can repeat these steps a couple of times to enter all your websites.
+Note: You can't enter the same website twice or it will give an error. The best thing to do is to add a number to the end of the website if you want to add a few accounts for the same website (facebook, facebook1, facebook2, ....).
+
+#### Viewing passwords
+After adding your passwords you will be able to view them by entering 1 in the login function screen where you have options 1 - 5.
+Once you hit enter the program will pull all your stored passwords and display them on the screen for you. 
+It then returns you back to the login function.
+
+#### Editing passwords
+You can also edit your passwords if you enter 3 in the login function screen. 
+The first thing you are asked is to enter the website for the password you want to edit.
+If the website you entered is stored in the system it will then ask you to enter a new password.
+Once the new password is created and it meets the password criteria it will let you know if the password was updated and return you to the login function screen.
+
+#### Editing the master password
+To edit your master password you need to enter 4 at the login function screen.
+The program will ask you to enter your name "This is not your username".
+After your name is accepted it will ask you to enter a new password.
+If your password meets the criteria it will display a message saying password updated.
+You will then be returned to the login function screen.
+
+#### Exit 
+Once you are finished in your password manager you gan enter 5 in the login function screen. This will return you to the main screen.
+
+</details>
+
+[Back to Table Of Contents](#table-of-contents)
+
 ### User Stories
 
 #### First-time  User
