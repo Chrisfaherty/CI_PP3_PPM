@@ -1,4 +1,6 @@
 """
+This is a link to the google sheet Incase you forget your login details
+https://docs.google.com/spreadsheets/d/1hjy44sL6GSv0NoIFjHyQlx9ZcJARXG5eooBUCtzmHSg/edit?usp=sharing
 These module were imported to allow the code to connect with the google
 sheet.
 """
@@ -139,6 +141,7 @@ def edit_passwords() -> str:
         new_password = input(" New password: \n ")
         password_manager_worksheet.update_cell(
             row_of_account, column_of_account, new_password)
+        print(Fore.GREEN + " Password Updated \n")
     else:
         print(Fore.RED + "This account does not exsist")
 
@@ -266,7 +269,6 @@ def main():
             elif option == "3":
                 print(Fore.YELLOW + " Editing a password: \n")
                 edit_passwords()
-                print(Fore.GREEN + " Password Updated \n")
                 options()
 
             elif option == "4":
