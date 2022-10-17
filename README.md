@@ -398,6 +398,7 @@ The following flowchart sumerises the structure of the password manager.
 </details>
 
 6. I want to be able to edit my master password or user passwords if required.
+
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
 | Main screen | Input your name | User is presented with options on how to proceed | Works as expected |
