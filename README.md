@@ -299,17 +299,22 @@ The following flowchart sumerises the structure of the password manager.
 ### Validator Testing
 * pycodestyle
     * No errors were found when passing the site pages through the [pycodestyle validator](https://pypi.org/project/pycodestyle/)
+    * Warnings were noted in the run.py file with the logo. This was due to the code thinking it was an excape sequance when using slashed.
+
+    <details><summary>pycodestyle</summary>
+    <img src="docs/testing/pycodestyle_ci_pp3_ppm.png">
+    </details>
 
     <details><summary>run.py</summary>
-    <img src="">
+    <img src="docs/testing/run_code_pep8.png">
     </details>
 
     <details><summary>validate_password.py</summary>
-    <img src="">
+    <img src="docs/testing/validate_password_code_pep8.png">
     </details>
 
     <details><summary>test_validation.py</summary>
-    <img src="">
+    <img src="docs/testing/test_validation_code_pep8.png">
     </details>
 
 
