@@ -17,24 +17,22 @@ With the pace of everything going digital and everyone having different accounts
 
 1. [Project Goals](#project-goals)
     1. [User Goals](#user-goals)
-    2. [Return User Goals](#returning-user)
-    3. [Site Owner Goals](#site-owner-goals)
+    2. [Site Owner Goals](#site-owner-goals)
 2. [User Experience](#user-experience)
     1. [Target Audience](#target-audience)
     2. [User Requirements and Expectations](#user-requirements-and-expectations)
-    3. [User Stories](#user-stories)
-3. [Design](#design)
-    1. [Design Choices](#design-choices)
-    2. [Colour](#colour)
-    3. [Fonts](#fonts)
-    4. [Structure](#structure)
-    5. [Wireframes](#wireframes)
+    3. [User Manual](#user-manual)
+    4. [User Stories](#user-stories)
+3. [Technical Design](#technical-design)
+    1. [Flowchart](#flowchart)
 4. [Technologies Used](#technologies-used)
     1. [Languages](#languages)
     2. [Framework and Tools](#framework-and-tools)
+    3. [libraries](#libraries)
 5. [Features](#features)
 6. [Testing](#testing)
-    1. [Testing user stories](#testing-user-stories)
+    1. [Validator Testing](#validator-testing)
+    2. [Testing user stories](#testing-user-stories)
 8. [Bugs](#bugs)
 9. [Deployment](#deployment)
 10. [Credits](#credits)
@@ -397,6 +395,7 @@ The following flowchart sumerises the structure of the password manager.
 <img src="docs/testing/user_story_1_4.png">
 <img src="docs/testing/user_story_5_1.png">
 <img src="docs/testing/user_story_5_2.png">
+</details>
 
 6. I want to be able to edit my master password or user passwords if required.
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
@@ -414,6 +413,7 @@ The following flowchart sumerises the structure of the password manager.
 <img src="docs/testing/user_story_1_4.png">
 <img src="docs/testing/user_story_6_1.png">
 <img src="docs/testing/user_story_6_2.png">
+</details>
 
 7. I want to be able to get feedback if i enter something incorrectly.  
 
@@ -428,6 +428,7 @@ The following flowchart sumerises the structure of the password manager.
 <img src="docs/testing/user_story_1_1.png">
 <img src="docs/testing/user_story_1_2.png">
 <img src="docs/testing/user_story_7_1.png">
+</details>
 
 8. I want users to enjoy the experiance to make their personal password manager.
 
