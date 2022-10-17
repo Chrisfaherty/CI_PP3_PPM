@@ -526,11 +526,13 @@ The following flowchart sumerises the structure of the password manager.
 
 ### Fixed Bugs
 * When edinting the master password if you intered the user name instead of the name it would print the new password in the incorrect cell.
-    * Change the function to focus on the one cell as this cell will not change.
+    * FIX: Change the function to focus on the one cell as this cell will not change.
 * When locating the specific row and column for edit password the function would break if the coordinates where past row 9.
-    * An if else statement was added so the formula changes once the cell is past row 9.
+    * FIX: An if else statement was added so the formula changes once the cell is past row 9.
 * When adding websites you could add the same one a few times but then to change the password it would change the first one it found.
-    * A function was created to search for that website before adding a new one to the spread sheet. If there was one in the sheet already it would give a prompt to change the name so it is different to what is currently stored.
+    * FIX: A function was created to search for that website before adding a new one to the spread sheet. If there was one in the sheet already it would give a prompt to change the name so it is different to what is currently stored.
+* When trying to edit a password that is not in the google sheet it would say dose not exsist but also triger the password updated print.
+    * FIX: Moved the "password updated" from the main function to the edit password function.
 
 ## Deployment
 
