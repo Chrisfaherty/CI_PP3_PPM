@@ -33,6 +33,7 @@ With the pace of everything going digital and everyone having different accounts
 6. [Testing](#testing)
     1. [Validator Testing](#validator-testing)
     2. [Testing user stories](#testing-user-stories)
+    3. [Unit Testing](#unit-testing)
 8. [Bugs](#bugs)
 9. [Deployment](#deployment)
 10. [Credits](#credits)
@@ -73,10 +74,10 @@ With the pace of everything going digital and everyone having different accounts
 
 #### Welcome
 On the welcome screen the project logo is displayed and it explains that this is a personal password manager.
-The first thing you have to do in input your name in the field and press enter.
+The first thing you have to do is input your name in the field and press enter.
 
 #### Main
-After entering your name you in the welcome screen you are greeted. The next step is to create your account assuming this is the first time using this password manager. 
+After entering your name in the welcome screen you are greeted. The next step is to create your account assuming this is the first time using this password manager. 
 To create an account type "create account" into the prompt window. It is importing to have the space in between create and account.
 
 #### Create account
@@ -269,7 +270,7 @@ The following flowchart sumerises the structure of the password manager.
     * This function returns the user to the main screen.
     * User stories: 9, 10.
 
-![This is an screenshot of the exit option screen](docs/features/edit_master_password_screen.png)
+![This is an screenshot of the exit option screen](docs/features/exit_option_5.png)
 
  * Error message for passwords:
     * This is the prompt that shows if the user does not follow the create password criteria.
@@ -346,7 +347,7 @@ The following flowchart sumerises the structure of the password manager.
 <img src="docs/testing/user_story_2_2.png">
 </details>
 
-3. I want to have clear options displayed when dicisions are to be made.
+3. I want to have clear options displayed when decisions are to be made.
 
 | **Feature** | **Action** | **Expected Results** | **Actual Result** |
 |-------------|------------|----------------------|-------------------|
@@ -532,7 +533,7 @@ The following flowchart sumerises the structure of the password manager.
 ## Bugs
 
 ### Fixed Bugs
-* When edinting the master password if you intered the user name instead of the name it would print the new password in the incorrect cell.
+* When editing the master password if you entered the user name instead of the name it would print the new password in the incorrect cell.
     * FIX: Change the function to focus on the one cell as this cell will not change.
 * When locating the specific row and column for edit password the function would break if the coordinates where past row 9.
     * FIX: An if else statement was added so the formula changes once the cell is past row 9.
